@@ -32,7 +32,7 @@
             --bg-light: #f4f4f2;
             --text-dark: #111111;
             --text-light: #f4f4f2;
-            --text-muted: #b3b3b8; /* Enhanced contrast for accessibility */
+            --text-muted: #8e8e93;
             --border: rgba(255, 255, 255, 0.12);
             --font-display: 'Syne', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -46,7 +46,6 @@
 
         html {
             scroll-behavior: smooth;
-            hyphens: auto;
         }
 
         body {
@@ -129,7 +128,6 @@
             opacity: 1;
         }
 
-        /* Hamburger Button (Desktop versteckt) */
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -148,18 +146,17 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            background: linear-gradient(180deg, rgba(10, 11, 13, 0.5) 0%, rgba(10, 11, 13, 0.9) 100%), 
+            background: linear-gradient(180deg, rgba(10, 11, 13, 0.4) 0%, rgba(10, 11, 13, 0.85) 100%), 
                         url('4b6c226f-37bf-40d3-83ad-4597f8f88249.jpeg') center/cover no-repeat;
         }
 
         .hero-tag {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            color: #e2e2e8; /* High contrast for WCAG accessibility */
+            color: var(--text-muted);
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 0.05em;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.8);
         }
 
         .hero-title {
@@ -491,74 +488,19 @@
             gap: 20px;
         }
 
-        .footer-links {
-            display: flex;
-            gap: 15px;
-            font-size: 0.85rem;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-
-        /* MODAL DIALOGS FOR IMPRESSUM & PRIVACY */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 200;
-            overflow-y: auto;
-            padding: 40px 20px;
-        }
-
-        .modal-content {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 40px;
-            border-radius: 12px;
-            position: relative;
+        .social-link-ig {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             color: var(--text-light);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.8rem;
-            cursor: pointer;
-        }
-
-        .modal-content h2 {
-            font-family: var(--font-display);
-            margin-bottom: 20px;
-        }
-
-        .modal-content h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .modal-content p, .modal-content ul {
+            text-decoration: none;
+            font-weight: 700;
             font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .social-link-ig:hover {
+            opacity: 0.7;
         }
 
         /* RESPONSIVE DESIGNS / MOBILE ANPASSUNGEN */
@@ -569,12 +511,12 @@
             
             header { 
                 padding: 15px 20px; 
-                justify-content: space-between;
+                justify-content: start;
                 gap: 15px;
             }
 
             .logo {
-                font-size: 1.1rem; /* Logo kleiner auf Mobilgeräten */
+                font-size: 1.1rem;
             }
 
             .mobile-menu-toggle {
@@ -612,11 +554,6 @@
             .section-light, .section-dark, .cta-banner-section { 
                 padding: 60px 20px; 
             }
-
-            footer {
-                flex-direction: column;
-                align-items: flex-start;
-            }
         }
     </style>
 </head>
@@ -627,7 +564,7 @@
         <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
         <nav id="nav-menu">
             <a href="#about" onclick="closeMenu()" data-de="ÜBER MICH" data-en="ABOUT">ÜBER MICH</a>
-            <a href="#music" onclick="closeMenu()" data-de="LIVE AUF&shy;NAHMEN UND MIXES" data-en="LIVE RECORDINGS & MIXES">LIVE AUF&shy;NAHMEN UND MIXES</a>
+            <a href="#music" onclick="closeMenu()" data-de="LIVE AUFNAHMEN UND MIXES" data-en="LIVE RECORDINGS & MIXES">LIVE AUFNAHMEN UND MIXES</a>
             <a href="#booking" onclick="closeMenu()" data-de="ANFRAGEN" data-en="INQUIRE">ANFRAGEN</a>
             <div class="lang-switch">
                 <button class="lang-btn active" onclick="setLanguage('de')">DE</button>
@@ -637,9 +574,9 @@
     </header>
 
     <section class="hero">
-        <div class="hero-tag" data-de="[ SPEZIALI&shy;SIERTER DJ FÜR HOCH&shy;ZEITEN & EVENTS ]" data-en="[ SPECIALIZED DJ FOR WEDDINGS & EVENTS ]">[ SPEZIALI&shy;SIERTER DJ FÜR HOCH&shy;ZEITEN & EVENTS ]</div>
-        <h1 class="hero-title" data-de="HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDEN&shy;SCHAFT&shy;LICHER DJ UND MUSIKER." data-en="HEJ! I AM PETER. 50% DANISH, 50% GERMAN AND 100% PASSIONATE DJ AND MUSICIAN.">
-            HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDEN&shy;SCHAFT&shy;LICHER DJ UND MUSIKER.
+        <div class="hero-tag" data-de="[ SPEZIALISIERTER DJ FÜR HOCHZEITEN & EVENTS ]" data-en="[ SPECIALIZED DJ FOR WEDDINGS & EVENTS ]">[ SPEZIALISIERTER DJ FÜR HOCHZEITEN & EVENTS ]</div>
+        <h1 class="hero-title" data-de="HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ UND MUSIKER." data-en="HEJ! I AM PETER. 50% DANISH, 50% GERMAN AND 100% PASSIONATE DJ AND MUSICIAN.">
+            HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ UND MUSIKER.
         </h1>
         <div>
             <a href="#booking" class="btn-primary" data-de="JETZT ANFRAGEN" data-en="INQUIRE NOW">JETZT ANFRAGEN</a>
@@ -655,9 +592,9 @@
             <div class="bio-text">
                 <h2 class="section-title" style="margin-bottom: 25px;" data-de="ÜBER MICH" data-en="ABOUT ME">ÜBER MICH</h2>
                 
-                <p data-de="Schon seit meiner Kindheit liebe und lebe ich Musik. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elek&shy;tro&shy;ni&shy;schen Musik&shy;szene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs." 
+                <p data-de="Schon seit meiner Kindheit liebe und lebe ich Musik. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs." 
                    data-en="Ever since I was a kid, music has been my passion. Moving to Berlin in my early twenties, I fell in love with the electronic music scene and quickly started DJing in local bars and clubs.">
-                   Schon seit meiner Kindheit liebe und lebe ich Musik. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elek&shy;tro&shy;ni&shy;schen Musik&shy;szene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs.
+                   Schon seit meiner Kindheit liebe und lebe ich Musik. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs.
                 </p>
 
                 <p data-de="Da ich musikalisch sehr breit aufgestellt bin, reichte mir ein reines Techno-Set irgendwann nicht mehr aus. Vor 5 Jahren überredeten mich gute Kumpels hartnäckig, auf der Hochzeit von Freunden aufzulegen und der Rest ist Geschichte." 
@@ -665,28 +602,28 @@
                    Da ich musikalisch sehr breit aufgestellt bin, reichte mir ein reines Techno-Set irgendwann nicht mehr aus. Vor 5 Jahren überredeten mich gute Kumpels hartnäckig, auf der Hochzeit von Freunden aufzulegen und der Rest ist Geschichte.
                 </p>
 
-                <p data-de="Bei einer Hochzeit geht es darum, alle Genera&shy;tio&shy;nen zum Tanzen zu bringen und die Persön&shy;lich&shy;keit des Paares musikalisch zu spiegeln. Man ist stimmungs&shy;voller Gastgeber, begeistert mit frischer Musik, schafft nahtlose Übergänge und fungiert gleichzeitig als musikalischer Türsteher, falls Tante Ingrid wieder Schlager hören möchte." 
+                <p data-de="Bei einer Hochzeit geht es darum, alle Generationen zum Tanzen zu bringen und die Persönlichkeit des Paares musikalisch zu spiegeln. Man ist stimmungsvoller Gastgeber, begeistert mit frischer Musik, schafft nahtlose Übergänge und fungiert gleichzeitig als musikalischer Türsteher, falls Tante Ingrid wieder Schlager hören möchte." 
                    data-en="At a wedding, it is all about getting everyone dancing while reflecting the couple's personality. You bring energy, connect generations, create seamless transitions, and act as a musical bouncer when Aunt Ingrid requests cheesy party tunes.">
-                   Bei einer Hochzeit geht es darum, alle Genera&shy;tio&shy;nen zum Tanzen zu bringen und die Persön&shy;lich&shy;keit des Paares musikalisch zu spiegeln. Man ist stimmungs&shy;voller Gastgeber, begeistert mit frischer Musik, schafft nahtlose Übergänge und fungiert gleichzeitig als musikalischer Türsteher, falls Tante Ingrid wieder Schlager hören möchte.
+                   Bei einer Hochzeit geht es darum, alle Generationen zum Tanzen zu bringen und die Persönlichkeit des Paares musikalisch zu spiegeln. Man ist stimmungsvoller Gastgeber, begeistert mit frischer Musik, schafft nahtlose Übergänge und fungiert gleichzeitig als musikalischer Türsteher, falls Tante Ingrid wieder Schlager hören möchte.
                 </p>
 
-                <p data-de="Ich weiß genau, wie wichtig dieser Tag ist: Als ich 2020 selbst geheiratet habe, durfte ich erleben, wie entscheidend ein vertrauens&shy;voller DJ ist. Jemand, der nicht nur selbst Spaß hat, sondern da ist, um euren Abend unver&shy;gess&shy;lich zu machen." 
-                   data-en="I know how important this day is: Having married in 2020 myself, I experienced firsthand how essential a trusted DJ is. Someone who is dedicated to making your night special.">
-                   Ich weiß genau, wie wichtig dieser Tag ist: Als ich 2020 selbst geheiratet habe, durfte ich erleben, wie entscheidend ein vertrauens&shy;voller DJ ist. Jemand, der nicht nur selbst Spaß hat, sondern da ist, um euren Abend unver&shy;gess&shy;lich zu machen.
+                <p data-de="Ich weiß genau, wie wichtig dieser Tag ist: Als ich 2020 selbst geheiratet habe, durfte ich erleben, wie entscheidend ein vertrauensvoller DJ ist. Jemand, der nicht nur selbst Spaß hat, sondern da ist um Leute zusammenzubringen, sich selbst in den Hintergrund zu stellen und das Beste aus diesem besonderen Moment rauszuholen." 
+                   data-en="I know how important this day is: Having married in 2020 myself, I experienced firsthand how essential a trusted DJ is. Someone who isn't just having fun themselves, but is there to bring people together, stay in the background, and make the absolute most of this special moment.">
+                   Ich weiß genau, wie wichtig dieser Tag ist: Als ich 2020 selbst geheiratet habe, durfte ich erleben, wie entscheidend ein vertrauensvoller DJ ist. Jemand, der nicht nur selbst Spaß hat, sondern da ist um Leute zusammenzubringen, sich selbst in den Hintergrund zu stellen und das Beste aus diesem besonderen Moment rauszuholen.
                 </p>
 
-                <p data-de="Dieser Tag gehört euch! Meine Priori&shy;tät ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure indivi&shy;duellen Wünsche und Genres." 
+                <p data-de="Dieser Tag gehört euch! Meine Priorität ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure individuellen Wünsche und Genres." 
                    data-en="This day belongs to you! My priority is playing music that keeps you and your guests happy. I am always open to your personal track requests and genres.">
-                   Dieser Tag gehört euch! Meine Priori&shy;tät ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure indivi&shy;duellen Wünsche und Genres.
+                   Dieser Tag gehört euch! Meine Priorität ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure individuellen Wünsche und Genres.
                 </p>
 
                 <div class="benefits-box">
                     <h4 data-de="WAS IHR BEKOMMT:" data-en="WHAT YOU GET:">WAS IHR BEKOMMT:</h4>
                     <ul class="benefits-list">
-                        <li data-de="Absolute Freund&shy;lich&shy;keit & persönliche Abstimmung" data-en="Friendly & personal communication">Absolute Freund&shy;lich&shy;keit & persönliche Abstimmung</li>
-                        <li data-de="Zuver&shy;lässig&shy;keit & Pünkt&shy;lich&shy;keit" data-en="Reliability & punctuality">Zuver&shy;lässig&shy;keit & Pünkt&shy;lich&shy;keit</li>
+                        <li data-de="Absolute Freundlichkeit & persönliche Abstimmung" data-en="Friendly & personal communication">Absolute Freundlichkeit & persönliche Abstimmung</li>
+                        <li data-de="Zuverlässigkeit & Pünktlichkeit" data-en="Reliability & punctuality">Zuverlässigkeit & Pünktlichkeit</li>
                         <li data-de="Motivation bis der letzte Gast die Tanzfläche verlässt" data-en="100% Energy until the very last guest leaves">Motivation bis der letzte Gast die Tanzfläche verlässt</li>
-                        <li data-de="Profe&shy;ssio&shy;nelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)" data-en="Professional DJ gear (Laptop, MIDI Controller, Mixer)">Profe&shy;ssio&shy;nelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)</li>
+                        <li data-de="Professionelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)" data-en="Professional DJ gear (Laptop, MIDI Controller, Mixer)">Professionelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)</li>
                     </ul>
                 </div>
             </div>
@@ -725,8 +662,8 @@
     <!-- CALL TO ACTION BANNER -->
     <section class="cta-banner-section">
         <div class="cta-banner-container">
-            <h3 class="cta-banner-title" data-de="LASS UNS EURE PARTY UNVER&shy;GESS&shy;LICH MACHEN." data-en="LET'S MAKE YOUR PARTY UNFORGETTABLE.">
-                LASS UNS EURE PARTY UNVER&shy;GESS&shy;LICH MACHEN.
+            <h3 class="cta-banner-title" data-de="LASS MICH EUCH HELFEN EURE NACHT BESONDERS ZU MACHEN." data-en="LET ME HELP YOU MAKE YOUR NIGHT SPECIAL.">
+                LASS MICH EUCH HELFEN EURE NACHT BESONDERS ZU MACHEN.
             </h3>
             <a href="#booking" class="btn-primary" data-de="JETZT ANFRAGEN" data-en="INQUIRE NOW">JETZT ANFRAGEN</a>
         </div>
@@ -775,7 +712,7 @@
     <!-- LIVE AUFNAHMEN UND MIXES -->
     <section id="music" class="section-dark">
         <div class="section-header">
-            <h2 class="section-title" data-de="LIVE AUF&shy;NAHMEN UND MIXES" data-en="LIVE RECORDINGS & MIXES">LIVE AUF&shy;NAHMEN UND MIXES</h2>
+            <h2 class="section-title" data-de="LIVE AUFNAHMEN UND MIXES" data-en="LIVE RECORDINGS & MIXES">LIVE AUFNAHMEN UND MIXES</h2>
         </div>
 
         <div class="audio-grid">
@@ -815,16 +752,6 @@
             <h2 class="section-title">Q&A</h2>
         </div>
         <div style="max-width: 800px; margin: 0 auto;">
-            
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-question">
-                    <span data-de="Bringst du eine Anlage mit?" data-en="Do you bring a sound system?">Bringst du eine Anlage mit?</span>
-                    <span class="faq-toggle-icon">+</span>
-                </div>
-                <div class="faq-answer" data-de="Ich biete eine SoundBoks an, die ich gerne mitbringen kann, wenn ich ankomme. Passt meistens perfekt für Partys mit 50–80 Gästen." data-en="I offer a SoundBoks speaker that I can bring along when I arrive. Usually perfectly fits parties with 50–80 guests.">
-                    Ich biete eine <a href="https://soundboks.de/en/products/soundboks-4" target="_blank">SoundBoks</a> an, die ich gerne mitbringen kann, wenn ich ankomme. Passt meistens perfekt für Partys mit 50–80 Gästen.
-                </div>
-            </div>
 
             <div class="faq-item" onclick="this.classList.toggle('active')">
                 <div class="faq-question">
@@ -866,13 +793,33 @@
                 </div>
             </div>
 
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Spielst du bestimmte Sachen nicht?" data-en="Are there specific genres/songs you don't play?">Spielst du bestimmte Sachen nicht?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Grundsätzlich nein, aber ich bin wirklich kein großer Fan von Schlager." data-en="Generally no, but I am really not a big fan of Schlager / German pop-folk music.">
+                    Grundsätzlich nein, aber ich bin wirklich kein großer Fan von Schlager.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Bringst du eine Anlage mit?" data-en="Do you bring a sound system?">Bringst du eine Anlage mit?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Ich biete eine SoundBoks an, die ich gerne mitbringen kann, wenn ich ankomme. Passt meistens perfekt für Partys mit 50–80 Gästen." data-en="I offer a SoundBoks speaker that I can bring along when I arrive. Usually perfectly fits parties with 50–80 guests.">
+                    Ich biete eine <a href="https://soundboks.de/en/products/soundboks-4" target="_blank">SoundBoks</a> an, die ich gerne mitbringen kann, wenn ich ankomme. Passt meistens perfekt für Partys mit 50–80 Gästen.
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- BUCHUNG / ANFRAGE -->
+    <!-- ANFRAGE -->
     <section id="booking" class="section-dark" style="background-color: #0f1013;">
         <div class="section-header">
-            <h2 class="section-title" data-de="BUCHUNG / ANFRAGE" data-en="BOOKING REQUEST">BUCHUNG / ANFRAGE</h2>
+            <h2 class="section-title" data-de="ANFRAGEN" data-en="INQUIRE">ANFRAGEN</h2>
         </div>
         <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="8e443660-2590-4aa0-9fc6-e6468074b785">
@@ -881,22 +828,18 @@
             <div class="form-group"><label data-de="Name" data-en="Name">Name</label><input type="text" name="name" required></div>
             <div class="form-group"><label data-de="E-Mail" data-en="Email">E-Mail</label><input type="email" name="email" required></div>
             <div class="form-group"><label data-de="Geplantes Datum" data-en="Planned Date">Geplantes Datum</label><input type="date" name="date" required></div>
-            <div class="form-group"><label data-de="Location / Veran&shy;staltungs&shy;ort" data-en="Location / Venue">Location / Veran&shy;staltungs&shy;ort</label><input type="text" name="location" placeholder="z.B. Berlin, Hotel xy..." required></div>
+            <div class="form-group"><label data-de="Location / Veranstaltungsort" data-en="Location / Venue">Location / Veranstaltungsort</label><input type="text" name="location" placeholder="z.B. Berlin, Hotel xy..." required></div>
             
-            <div class="form-group">
+            <div class="form-group full">
                 <label data-de="Wie viele Stunden ca.?" data-en="Approx. duration in hours?">Wie viele Stunden ca.?</label>
                 <input type="number" name="duration" placeholder="z.B. 6">
             </div>
 
-            <div class="form-group">
-                <label data-de="Benötigst du eine Anlage?" data-en="Do you need a sound system?">Benötigst du eine Anlage?</label>
-                <select name="sound_system_needed">
-                    <option value="Ja, SoundBoks benötigt" data-de="Ja, bitte Anlage / SoundBoks mitbringen" data-en="Yes, please bring sound system / SoundBoks">Ja, bitte Anlage / SoundBoks mitbringen</option>
-                    <option value="Nein, Anlage vorhanden" data-de="Nein, Tontechnik ist vor Ort vorhanden" data-en="No, sound system available at venue">Nein, Tontechnik ist vor Ort vorhanden</option>
-                </select>
+            <div class="form-group full">
+                <label data-de="Details zur Feier & Musikrichtungen" data-en="Event details & music preferences">Details zur Feier & Musikrichtungen</label>
+                <textarea name="message" rows="4" placeholder="House, Disco, 80er, Funk, Gästeanzahl, Ablauf..."></textarea>
             </div>
-
-            <div class="form-group full"><label data-de="Details & Musik&shy;wünsche" data-en="Details & Preferences">Details & Musik&shy;wünsche</label><textarea name="message" rows="4" placeholder="House, Disco, 80er, Funk..."></textarea></div>
+            
             <div class="form-group full"><button type="submit" class="btn-primary" style="width: 100%;" data-de="ANFRAGE ABSENDEN" data-en="SUBMIT REQUEST">ANFRAGE ABSENDEN</button></div>
         </form>
     </section>
@@ -904,53 +847,14 @@
     <footer>
         <div class="logo">DJ PRESS PETE</div>
         <div style="color: var(--text-muted); font-size: 0.85rem;">Berlin | Copenhagen | Palma de Mallorca</div>
+        <a href="https://www.instagram.com/presspete/" target="_blank" class="social-link-ig">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            @presspete
+        </a>
         <div><a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: none; font-weight: 700;">umitumlaut@gmail.com</a></div>
-        <div class="footer-links">
-            <a onclick="openModal('impressum-modal')">Impressum</a>
-            <a onclick="openModal('privacy-modal')">Datenschutz</a>
-        </div>
     </footer>
-
-    <!-- IMPRESSUM MODAL -->
-    <div id="impressum-modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('impressum-modal')">&times;</button>
-            <h2>Impressum</h2>
-            <p><strong>Angaben gemäß § 5 TMG:</strong></p>
-            <p>Peter / DJ PRESS PETE<br>
-            E-Mail: umitumlaut@gmail.com<br>
-            Sitz: Berlin, Deutschland</p>
-            
-            <h3>Inhaltlich Verantwortlich</h3>
-            <p>Peter (DJ PRESS PETE)</p>
-
-            <h3>Haftung für Inhalte & Links</h3>
-            <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Links zu externen Websites Dritter werden sorgfältig geprüft, für deren Inhalte übernehmen wir jedoch keine Gewähr.</p>
-        </div>
-    </div>
-
-    <!-- PRIVACY MODAL -->
-    <div id="privacy-modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('privacy-modal')">&times;</button>
-            <h2>Datenschutzerklärung</h2>
-            
-            <h3>1. Datenschutz auf einen Blick</h3>
-            <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO) sowie dieser Datenschutzerklärung behandelt.</p>
-
-            <h3>2. Datenerfassung auf dieser Website (Kontaktformular)</h3>
-            <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten (Name, E-Mail-Adresse, Datum, Veranstaltungsort, Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
-
-            <h3>3. Speicherung und Verarbeitung via Web3Forms</h3>
-            <p>Für den Versand unseres Kontaktformulars nutzen wir den Dienst <strong>Web3Forms</strong>. Die von Ihnen eingegebenen Daten werden verschlüsselt an die Server von Web3Forms weitergeleitet und direkt als E-Mail an uns (umitumlaut@gmail.com) zugestellt. Web3Forms speichert Ihre Formulardaten nicht dauerhaft in einer öffentlichen Datenbank. Eine Weitergabe Ihrer Daten an sonstige Dritte findet nicht statt.</p>
-
-            <h3>4. Einbindung von Drittanbietern (SoundCloud & Google Fonts)</h3>
-            <p>Auf unserer Website sind Widgets des Dienstes SoundCloud sowie Web-Schriftarten von Google Fonts eingebunden. Beim Laden dieser Elemente können Ihre IP-Adresse und technische Browserdaten an die jeweiligen Betreiber übertragen werden.</p>
-
-            <h3>5. Ihre Rechte</h3>
-            <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Wenden Sie sich hierfür gerne jederzeit an umitumlaut@gmail.com.</p>
-        </div>
-    </div>
 
     <script>
         function toggleMenu() {
@@ -975,21 +879,7 @@
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             if(lang === 'de') { document.querySelectorAll('.lang-btn')[0].classList.add('active'); } 
             else { document.querySelectorAll('.lang-btn')[1].classList.add('active'); }
-            document.querySelectorAll('[data-' + lang + ']').forEach(el => { el.innerHTML = el.getAttribute('data-' + lang); });
-        }
-
-        function openModal(id) {
-            document.getElementById(id).style.display = 'block';
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
         }
     </script>
 </body>
