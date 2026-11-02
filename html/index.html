@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ PRESS PETE | Spezialisierter Hochzeit & Event DJ</title>
+    <title>DJ PRESS PETE | Hochzeit & Event DJ in Berlin, Kopenhagen & Mallorca</title>
+    <meta name="description" content="Spezialisierter DJ für Hochzeiten, Corporate Events und private Feiern in Berlin, Kopenhagen und Mallorca. Disco, House, Funk, 80s/90s. Jetzt unverbindlich anfragen!">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1NK98HZXB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E1NK98HZXB');
+    </script>
+
+    <!-- Schema.org Structured Data (Local SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DJ PRESS PETE",
+      "image": "https://presspete.com/share-preview.jpg",
+      "url": "https://presspete.com/",
+      "email": "umitumlaut@gmail.com",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": ["Berlin", "Brandenburg", "Copenhagen", "Palma de Mallorca"],
+      "sameAs": [
+        "https://www.instagram.com/presspete/",
+        "https://soundcloud.com/presspete"
+      ]
+    }
+    </script>
 
     <!-- PNG Favicon Einbindung -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Open Graph Meta-Tags für Link-Vorschau (WhatsApp, iMessage, Social Media) -->
+    <!-- Open Graph Meta-Tags für Link-Vorschau -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://presspete.com/">
     <meta property="og:title" content="DJ PRESS PETE | Spezialisierter DJ für Hochzeiten & Events">
@@ -179,12 +213,54 @@
             text-transform: uppercase;
             font-size: 0.85rem;
             text-decoration: none;
+            border: none;
+            cursor: pointer;
             transition: transform 0.2s, background-color 0.2s;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
             background: #e0e0e0;
+        }
+
+        /* ROLLENDES BAND FÜR LOCATIONS (MARQUEE) */
+        .marquee-container {
+            background: #111317;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            gap: 40px;
+            animation: marquee 28s linear infinite;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .marquee-item::after {
+            content: "•";
+            color: #ffffff;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .section-light {
@@ -215,6 +291,26 @@
             text-transform: uppercase;
             line-height: 1;
         }
+
+        /* GOOGLE REVIEW BADGE */
+        .google-rating-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 8px 18px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            text-decoration: none;
+            color: #111;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .google-rating-pill:hover { transform: translateY(-2px); }
+        .google-g-icon { width: 18px; height: 18px; }
 
         .reviews-grid {
             display: grid;
@@ -445,6 +541,30 @@
             transition: transform 0.2s;
         }
 
+        /* VERFÜGBARKEITS-HINWEIS */
+        .availability-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #f4f4f2;
+        }
+
+        .availability-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2ecc71;
+            box-shadow: 0 0 10px #2ecc71;
+            flex-shrink: 0;
+        }
+
+        /* FORM STYLE */
         .booking-form {
             max-width: 800px;
             margin: 0 auto;
@@ -477,15 +597,62 @@
             color: #fff;
         }
 
+        .form-response-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* FLOATING MOBILE CTA */
+        .mobile-sticky-btn {
+            display: none;
+        }
+
+        /* FOOTER */
         footer {
-            padding: 60px 40px;
+            padding: 60px 40px 40px 40px;
             background: #000;
             border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-legal-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-legal-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-legal-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
         }
 
         .social-link-ig {
@@ -503,7 +670,7 @@
             opacity: 0.7;
         }
 
-        /* RESPONSIVE DESIGNS / MOBILE ANPASSUNGEN */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 900px) {
             .genre-section-grid, .about-grid, .booking-form { 
                 grid-template-columns: 1fr; 
@@ -554,6 +721,20 @@
             .section-light, .section-dark, .cta-banner-section { 
                 padding: 60px 20px; 
             }
+
+            .mobile-sticky-btn {
+                display: block;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 99;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -574,14 +755,33 @@
     </header>
 
     <section class="hero">
-        <div class="hero-tag" data-de="[ SPEZIALISIERTER DJ FÜR HOCHZEITEN & EVENTS ]" data-en="[ SPECIALIZED DJ FOR WEDDINGS & EVENTS ]">[ SPEZIALISIERTER DJ FÜR HOCHZEITEN & EVENTS ]</div>
-        <h1 class="hero-title" data-de="HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ UND MUSIKER." data-en="HEJ! I AM PETER. 50% DANISH, 50% GERMAN AND 100% PASSIONATE DJ AND MUSICIAN.">
-            HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ UND MUSIKER.
+        <div class="hero-tag" data-de="[ HOCHZEIT & EVENT DJ • BERLIN • COPENHAGEN • MALLORCA ]" data-en="[ WEDDING & EVENT DJ • BERLIN • COPENHAGEN • MALLORCA ]">[ HOCHZEIT & EVENT DJ • BERLIN • COPENHAGEN • MALLORCA ]</div>
+        <h1 class="hero-title" data-de="HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ." data-en="HEJ! I AM PETER. 50% DANISH, 50% GERMAN AND 100% PASSIONATE DJ.">
+            HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ.
         </h1>
         <div>
             <a href="#booking" class="btn-primary" data-de="JETZT ANFRAGEN" data-en="INQUIRE NOW">JETZT ANFRAGEN</a>
         </div>
     </section>
+
+    <!-- ROLLENDES REFERENZEN-BAND (MARQUEE) -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span class="marquee-item">Berliner Clubszene</span>
+            <span class="marquee-item">Destination Weddings Mallorca</span>
+            <span class="marquee-item">Eventlocations Berlin & Brandenburg</span>
+            <span class="marquee-item">Copenhagen Harbour Venues</span>
+            <span class="marquee-item">Private Rooftops & Fincas</span>
+            <span class="marquee-item">Corporate & Brand Events</span>
+            <!-- Duplikat für nahtloses Loop-Scrollen -->
+            <span class="marquee-item">Berliner Clubszene</span>
+            <span class="marquee-item">Destination Weddings Mallorca</span>
+            <span class="marquee-item">Eventlocations Berlin & Brandenburg</span>
+            <span class="marquee-item">Copenhagen Harbour Venues</span>
+            <span class="marquee-item">Private Rooftops & Fincas</span>
+            <span class="marquee-item">Corporate & Brand Events</span>
+        </div>
+    </div>
 
     <!-- ÜBER MICH -->
     <section id="about" class="section-light" style="background-color: #f8f8f6;">
@@ -645,6 +845,7 @@
                     <span class="genre-badge">80S / 90S</span>
                     <span class="genre-badge">00S</span>
                     <span class="genre-badge">RAP & FUNK</span>
+                    <span class="genre-badge">INDIE</span>
                     <span class="genre-badge">ROCK</span>
                     <span class="genre-badge">HOUSE & DEEP</span>
                     <span class="genre-badge">COSMIC HOUSE</span>
@@ -672,7 +873,19 @@
     <!-- WAS ANDERE SAGEN -->
     <section class="section-light">
         <div class="section-header">
-            <h2 class="section-title" data-de="WAS ANDERE SAGEN" data-en="WHAT OTHERS SAY">WAS ANDERE SAGEN</h2>
+            <div>
+                <!-- Google Rating Badge -->
+                <a href="https://maps.app.goo.gl/fNouyr41Gjhi6P127" target="_blank" class="google-rating-pill">
+                    <svg class="google-g-icon" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                    </svg>
+                    <span>5.0 ★★★★★ AUF GOOGLE</span>
+                </a>
+                <h2 class="section-title" data-de="WAS ANDERE SAGEN" data-en="WHAT OTHERS SAY">WAS ANDERE SAGEN</h2>
+            </div>
             <a href="https://maps.app.goo.gl/fNouyr41Gjhi6P127" target="_blank" style="color: var(--text-dark); font-weight: 700;" data-de="ALLE GOOGLE BEWERTUNGEN LESEN ↗" data-en="READ ALL GOOGLE REVIEWS ↗">ALLE GOOGLE BEWERTUNGEN LESEN ↗</a>
         </div>
         <div class="reviews-grid">
@@ -723,7 +936,7 @@
             </div>
             <div class="audio-card">
                 <div class="audio-title">Andrey + Sophie Hochzeit</div>
-                <div class="tags"><span class="tag">#Disco</span><span class="tag">#80s</span><span class="tag">#90s</span><span class="tag">#Pop</span></div>
+                <div class="tags"><span class="tag">#Disco</span><span class="tag">#80s</span><span class="tag">#90s</span></div>
                 <audio controls preload="metadata" src="Mix2_Andre.mp3"></audio>
             </div>
             <div class="audio-card">
@@ -733,12 +946,12 @@
             </div>
             <div class="audio-card">
                 <div class="audio-title">Wolf + Anna in Brandenburg</div>
-                <div class="tags"><span class="tag">#Pop</span><span class="tag">#80s</span><span class="tag">#Rock</span><span class="tag">#00s</span></div>
+                <div class="tags"><span class="tag">#Indie</span><span class="tag">#80s</span><span class="tag">#Rock</span><span class="tag">#00s</span></div>
                 <audio controls preload="metadata" src="Mix4_Wolf.mp3"></audio>
             </div>
         </div>
 
-        <!-- SOUNDCLOUD EMBED WIDGET -->
+        <!-- SOUNDCLOUD EMBED -->
         <div class="soundcloud-widget-container">
             <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
                 src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/presspete&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
@@ -758,8 +971,8 @@
                     <span data-de="Was ist dein Preis?" data-en="What is your pricing?">Was ist dein Preis?</span>
                     <span class="faq-toggle-icon">+</span>
                 </div>
-                <div class="faq-answer" data-de="Jede Hochzeit und jedes Event ist anders, daher ist mein Preis individuell." data-en="Every wedding and event is unique, which is why my pricing is tailored individually.">
-                    Jede Hochzeit und jedes Event ist anders, daher ist mein Preis individuell.
+                <div class="faq-answer" data-de="Jedes Event ist einzigartig, daher kalkuliere ich transparent nach Umfang, Spieldauer und Ort. Schickt mir einfach eure Rahmendaten über das Formular und ihr erhaltet innerhalb von 24 Stunden ein unverbindliches Angebot." data-en="Every event is unique, so pricing depends on duration, setup, and location. Send me your details via the form and you will receive a transparent quote within 24 hours.">
+                    Jedes Event ist einzigartig, daher kalkuliere ich transparent nach Umfang, Spieldauer und Ort. Schickt mir einfach eure Rahmendaten über das Formular und ihr erhaltet innerhalb von 24 Stunden ein unverbindliches Angebot.
                 </div>
             </div>
 
@@ -768,28 +981,28 @@
                     <span data-de="Was passiert nach der Anfrage?" data-en="What happens after sending an inquiry?">Was passiert nach der Anfrage?</span>
                     <span class="faq-toggle-icon">+</span>
                 </div>
-                <div class="faq-answer" data-de="Ihr bekommt ein Angebot von mir. Passt es zu eurem Budget und euren Wünschen, können wir uns sehr gerne bei einem Videocall besser kennenlernen." data-en="You will receive a proposal from me. If it aligns with your budget and wishes, we can schedule a video call to get to know each other.">
-                    Ihr bekommt ein Angebot von mir. Passt es zu eurem Budget und euren Wünschen, können wir uns sehr gerne bei einem Videocall besser kennenlernen.
+                <div class="faq-answer" data-de="Ihr bekommt zeitnah ein konkretes Angebot. Passt es für euch, verabreden wir uns zu einem gemeinsamen Videocall, um uns kennenzulernen und eure musikalischen Vorstellungen abzustimmen." data-en="You will receive a quote promptly. If it fits, we schedule a relaxed video call to get to know each other and discuss your musical vision.">
+                    Ihr bekommt zeitnah ein konkretes Angebot. Passt es für euch, verabreden wir uns zu einem gemeinsamen Videocall, um uns kennenzulernen und eure musikalischen Vorstellungen abzustimmen.
                 </div>
             </div>
 
             <div class="faq-item" onclick="this.classList.toggle('active')">
                 <div class="faq-question">
-                    <span data-de="Machst du persönliche Treffen?" data-en="Do you meet in person beforehand?">Machst du persönliche Treffen?</span>
+                    <span data-de="Können wir uns vorab kennenlernen?" data-en="Can we meet beforehand?">Können wir uns vorab kennenlernen?</span>
                     <span class="faq-toggle-icon">+</span>
                 </div>
-                <div class="faq-answer" data-de="Da ich 3 Kinder und viel um die Ohren habe, bevorzuge ich einen Videocall." data-en="Since I have 3 kids and a busy schedule, I prefer doing a video call.">
-                    Da ich 3 Kinder und viel um die Ohren habe, bevorzuge ich einen Videocall.
+                <div class="faq-answer" data-de="Absolut! Um die Abstimmung für euch so flexibel und zeitsparend wie möglich zu halten, bevorzuge ich einen entspannten Videocall. So können wir alle Details in Ruhe besprechen – egal wo ihr gerade seid." data-en="Absolutely! To keep wedding planning efficient and flexible for you, I prefer doing a video call. This allows us to cover every detail easily, no matter where you are based.">
+                    Absolut! Um die Abstimmung für euch so flexibel und zeitsparend wie möglich zu halten, bevorzuge ich einen entspannten Videocall. So können wir alle Details in Ruhe besprechen – egal wo ihr gerade seid.
                 </div>
             </div>
 
             <div class="faq-item" onclick="this.classList.toggle('active')">
                 <div class="faq-question">
-                    <span data-de="Wann kommst du beim Event an?" data-en="When do you arrive at the event?">Wann kommst du beim Event an?</span>
+                    <span data-de="Wann bist du am Veranstaltungstag vor Ort?" data-en="When do you arrive on the day?">Wann bist du am Veranstaltungstag vor Ort?</span>
                     <span class="faq-toggle-icon">+</span>
                 </div>
-                <div class="faq-answer" data-de="Immer eine halbe Stunde vor Anfang meines Gigs." data-en="Always half an hour before the start of my gig.">
-                    Immer eine halbe Stunde vor Anfang meines Gigs.
+                <div class="faq-answer" data-de="Ich bin immer 30 Minuten vor Beginn meines Gigs vor Ort. Da mein Setup eingespielt und kompakt ist, ist das immer reichlich Zeit, um die Technik entspannt aufzubauen und startklar zu sein." data-en="I always arrive 30 minutes before the start of my gig. Since my setup is compact and well rehearsed, this is always plenty of time to set up smoothly and be ready to go.">
+                    Ich bin immer 30 Minuten vor Beginn meines Gigs vor Ort. Da mein Setup eingespielt und kompakt ist, ist das immer reichlich Zeit, um die Technik entspannt aufzubauen und startklar zu sein.
                 </div>
             </div>
 
@@ -798,8 +1011,8 @@
                     <span data-de="Spielst du bestimmte Sachen nicht?" data-en="Are there specific genres/songs you don't play?">Spielst du bestimmte Sachen nicht?</span>
                     <span class="faq-toggle-icon">+</span>
                 </div>
-                <div class="faq-answer" data-de="Grundsätzlich nein, aber ich bin wirklich kein großer Fan von Schlager." data-en="Generally no, but I am really not a big fan of Schlager / German pop-folk music.">
-                    Grundsätzlich nein, aber ich bin wirklich kein großer Fan von Schlager.
+                <div class="faq-answer" data-de="Grundsätzlich richte ich mich nach euren Wünschen. Schlager oder Ballermann-Hits sind jedoch nicht meine Welt – mein Fokus liegt auf stimmungsvoller Funk-, Disco-, 80s/90s-, 00s-, Indie-, Rock- und elektronischer Club-Musik mit echtem Drive." data-en="I cater to your musical taste. However, cheesy party tunes (German Schlager) are not my style — my focus is on soulful Funk, Disco, 80s/90s, 00s, Indie, Rock, and energetic electronic club vibes.">
+                    Grundsätzlich richte ich mich nach euren Wünschen. Schlager oder Ballermann-Hits sind jedoch nicht meine Welt – mein Fokus liegt auf stimmungsvoller Funk-, Disco-, 80s/90s-, 00s-, Indie-, Rock- und elektronischer Club-Musik mit echtem Drive.
                 </div>
             </div>
 
@@ -808,8 +1021,8 @@
                     <span data-de="Bringst du eine Anlage mit?" data-en="Do you bring a sound system?">Bringst du eine Anlage mit?</span>
                     <span class="faq-toggle-icon">+</span>
                 </div>
-                <div class="faq-answer" data-de="Ich biete eine SoundBoks an, die ich gerne mitbringen kann, wenn ich ankomme. Passt meistens perfekt für Partys mit 50–80 Gästen." data-en="I offer a SoundBoks speaker that I can bring along when I arrive. Usually perfectly fits parties with 50–80 guests.">
-                    Ich biete eine <a href="https://soundboks.de/en/products/soundboks-4" target="_blank">SoundBoks</a> an, die ich gerne mitbringen kann, wenn ich ankomme. Passt meistens perfekt für Partys mit 50–80 Gästen.
+                <div class="faq-answer" data-de="Ich biete gegen einen fairen Aufpreis eine SoundBoks 4 an, die ich direkt mitbringe. Perfekt für Partys mit 50–80 Gästen. Bei größeren Locations berate ich euch gerne zum Verleih vor Ort." data-en="For an additional fee, I offer a SoundBoks 4 speaker that I can bring along directly. Perfectly fits parties with 50–80 guests. For larger venues, I can advise you on local rental options.">
+                    Ich biete gegen einen fairen Aufpreis eine <a href="https://soundboks.de/en/products/soundboks-4" target="_blank">SoundBoks 4</a> an, die ich direkt mitbringe. Perfekt für Partys mit 50–80 Gästen. Bei größeren Locations berate ich euch gerne zum Verleih vor Ort.
                 </div>
             </div>
 
@@ -821,39 +1034,85 @@
         <div class="section-header">
             <h2 class="section-title" data-de="ANFRAGEN" data-en="INQUIRE">ANFRAGEN</h2>
         </div>
-        <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+
+        <div style="max-width: 800px; margin: 0 auto 30px auto;">
+            <div class="availability-badge">
+                <div class="availability-dot"></div>
+                <div data-de="Aktuell nehme ich Buchungen für die Saison 2026 entgegen. Auch erste Termine für 2027 werden bereits gebucht. Sichert euch euren Wunschtermin frühzeitig!" data-en="Currently accepting bookings for the 2026 season and early inquiries for 2027. Secure your preferred date early!">
+                    Aktuell nehme ich Buchungen für die Saison 2026 entgegen. Auch erste Termine für 2027 werden bereits gebucht. Sichert euch euren Wunschtermin frühzeitig!
+                </div>
+            </div>
+        </div>
+
+        <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Konfiguration & Weiterleitung auf Danke-Page -->
             <input type="hidden" name="access_key" value="8e443660-2590-4aa0-9fc6-e6468074b785">
             <input type="hidden" name="subject" value="Neue Buchungsanfrage von DJ PRESS PETE Website">
+            <input type="hidden" name="redirect" value="https://presspete.com/danke.html">
+            <!-- Honeypot Spamschutz -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
-            <div class="form-group"><label data-de="Name" data-en="Name">Name</label><input type="text" name="name" required></div>
-            <div class="form-group"><label data-de="E-Mail" data-en="Email">E-Mail</label><input type="email" name="email" required></div>
-            <div class="form-group"><label data-de="Geplantes Datum" data-en="Planned Date">Geplantes Datum</label><input type="date" name="date" required></div>
-            <div class="form-group"><label data-de="Location / Veranstaltungsort" data-en="Location / Venue">Location / Veranstaltungsort</label><input type="text" name="location" placeholder="z.B. Berlin, Hotel xy..." required></div>
-            
-            <div class="form-group full">
-                <label data-de="Wie viele Stunden ca.?" data-en="Approx. duration in hours?">Wie viele Stunden ca.?</label>
-                <input type="number" name="duration" placeholder="z.B. 6">
+            <div class="form-group">
+                <label data-de="Name *" data-en="Name *">Name *</label>
+                <input type="text" name="name" required placeholder="Vor- & Nachname">
+            </div>
+            <div class="form-group">
+                <label data-de="E-Mail *" data-en="Email *">E-Mail *</label>
+                <input type="email" name="email" required placeholder="beispiel@mail.de">
+            </div>
+            <div class="form-group">
+                <label data-de="Telefon / WhatsApp" data-en="Phone / WhatsApp">Telefon / WhatsApp</label>
+                <input type="tel" name="phone" placeholder="+49 170 1234567">
+            </div>
+            <div class="form-group">
+                <label data-de="Geplantes Datum *" data-en="Planned Date *">Geplantes Datum *</label>
+                <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label data-de="Location / Stadt *" data-en="Location / City *">Location / Stadt *</label>
+                <input type="text" name="location" placeholder="z.B. Berlin, Copenhagen, Mallorca..." required>
+            </div>
+            <div class="form-group">
+                <label data-de="Ungefähre Dauer" data-en="Approx. duration">Ungefähre Dauer</label>
+                <input type="text" name="duration" placeholder="z.B. 6 Stunden (Open End)">
             </div>
 
             <div class="form-group full">
-                <label data-de="Details zur Feier & Musikrichtungen" data-en="Event details & music preferences">Details zur Feier & Musikrichtungen</label>
-                <textarea name="message" rows="4" placeholder="House, Disco, 80er, Funk, Gästeanzahl, Ablauf..."></textarea>
+                <label data-de="Details zur Feier & Musikwünsche" data-en="Event details & music preferences">Details zur Feier & Musikwünsche</label>
+                <textarea name="message" rows="4" placeholder="Art der Feier (Hochzeit, B-Day, Corporate), Gästeanzahl, gewünschte Genres..."></textarea>
             </div>
             
-            <div class="form-group full"><button type="submit" class="btn-primary" style="width: 100%;" data-de="ANFRAGE ABSENDEN" data-en="SUBMIT REQUEST">ANFRAGE ABSENDEN</button></div>
+            <div class="form-group full">
+                <button type="submit" class="btn-primary" style="width: 100%;" data-de="UNVERBINDLICH ANFRAGEN" data-en="SUBMIT REQUEST">UNVERBINDLICH ANFRAGEN</button>
+                <p class="form-response-note" data-de="Ich melde mich in der Regel innerhalb von 24 Stunden mit einem individuellen Angebot." data-en="I usually reply within 24 hours with a custom proposal.">
+                    Ich melde mich in der Regel innerhalb von 24 Stunden mit einem individuellen Angebot.
+                </p>
+            </div>
         </form>
     </section>
 
+    <a href="#booking" class="btn-primary mobile-sticky-btn" data-de="TERMIN ANFRAGEN" data-en="INQUIRE NOW">TERMIN ANFRAGEN</a>
+
     <footer>
-        <div class="logo">DJ PRESS PETE</div>
-        <div style="color: var(--text-muted); font-size: 0.85rem;">Berlin | Copenhagen | Palma de Mallorca</div>
-        <a href="https://www.instagram.com/presspete/" target="_blank" class="social-link-ig">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            @presspete
-        </a>
-        <div><a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: none; font-weight: 700;">umitumlaut@gmail.com</a></div>
+        <div class="footer-top">
+            <div class="logo">DJ PRESS PETE</div>
+            <div style="color: var(--text-muted); font-size: 0.85rem;">Berlin | Copenhagen | Palma de Mallorca</div>
+            <a href="https://www.instagram.com/presspete/" target="_blank" class="social-link-ig">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                @presspete
+            </a>
+            <div><a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: none; font-weight: 700;">umitumlaut@gmail.com</a></div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2026 DJ PRESS PETE. Alle Rechte vorbehalten.</div>
+            <div class="footer-legal-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -861,11 +1120,7 @@
             const nav = document.getElementById('nav-menu');
             const toggleBtn = document.querySelector('.mobile-menu-toggle');
             nav.classList.toggle('open');
-            if (nav.classList.contains('open')) {
-                toggleBtn.textContent = '✕';
-            } else {
-                toggleBtn.textContent = '☰';
-            }
+            toggleBtn.textContent = nav.classList.contains('open') ? '✕' : '☰';
         }
 
         function closeMenu() {
@@ -877,9 +1132,27 @@
 
         function setLanguage(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            if(lang === 'de') { document.querySelectorAll('.lang-btn')[0].classList.add('active'); } 
-            else { document.querySelectorAll('.lang-btn')[1].classList.add('active'); }
-            document.querySelectorAll('[data-' + lang + ']').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+            if(lang === 'de') { 
+                document.querySelectorAll('.lang-btn')[0].classList.add('active'); 
+            } else { 
+                document.querySelectorAll('.lang-btn')[1].classList.add('active'); 
+            }
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => { 
+                el.textContent = el.getAttribute('data-' + lang); 
+            });
+        }
+
+        // GA4 Conversion Tracking beim Formular-Absenden
+        const bookingForm = document.getElementById('booking-form');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'Engagement',
+                        'event_label': 'Booking Inquiry Form'
+                    });
+                }
+            });
         }
     </script>
 </body>
