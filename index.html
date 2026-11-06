@@ -6,15 +6,21 @@
     <title>DJ PRESS PETE | Hochzeit & Event DJ in Berlin, Kopenhagen & Mallorca</title>
     <meta name="description" content="Spezialisierter DJ für Hochzeiten, Corporate Events und private Feiern in Berlin, Kopenhagen und Mallorca. Disco, House, Funk, 80s/90s. Jetzt unverbindlich anfragen!">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWWT8GLFCK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWWT8GLFCK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // DSGVO / GDPR Consent Mode Default
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
 
-  gtag('config', 'G-XWWT8GLFCK');
-</script>
+      gtag('js', new Date());
+      gtag('config', 'G-XWWT8GLFCK');
+    </script>
+    
     <!-- Schema.org Structured Data (Local SEO) -->
     <script type="application/ld+json">
     {
@@ -795,9 +801,9 @@
             <div class="bio-text">
                 <h2 class="section-title" style="margin-bottom: 25px;" data-de="ÜBER MICH" data-en="ABOUT ME">ÜBER MICH</h2>
                 
-                <p data-de="Schon seit meiner Kindheit liebe und lebe ich Musik. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs." 
-                   data-en="Ever since I was a kid, music has been my passion. Moving to Berlin in my early twenties, I fell in love with the electronic music scene and quickly started DJing in local bars and clubs.">
-                   Schon seit meiner Kindheit liebe und lebe ich Musik. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs.
+                <p data-de="Schon seit meiner Kindheit liebe und lebe ich Musik. Heute bin ich in Berlin-Kreuzberg zu Hause. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs." 
+                   data-en="Ever since I was a kid, music has been my passion. Today, I am based in Kreuzberg, Berlin. Moving to the city in my early twenties, I fell in love with the electronic music scene and quickly started DJing in local bars and clubs.">
+                   Schon seit meiner Kindheit liebe und lebe ich Musik. Heute bin ich in Berlin-Kreuzberg zu Hause. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs.
                 </p>
 
                 <p data-de="Da ich musikalisch sehr breit aufgestellt bin, reichte mir ein reines Techno-Set irgendwann nicht mehr aus. Vor 5 Jahren überredeten mich gute Kumpels hartnäckig, auf der Hochzeit von Freunden aufzulegen und der Rest ist Geschichte." 
@@ -820,9 +826,9 @@
                    Dieser Tag gehört euch! Meine Priorität ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure individuellen Wünsche und Genres.
                 </p>
 
-                <p data-de="In über 15 Jahren durfte ich bereits in verschiedensten renommierten Venues und Clubs auflegen – darunter im Kater Blau, Klunkerkranich, Festsaal Kreuzberg, in der Fabrik 23, bei den 3 Schwestern, im Abby Mood, auf dem Distortion Festival in Kopenhagen sowie in erstklassigen Hochzeitslocations wie der Lodge Kremmen."
-                   data-en="Over the past 15+ years, I have performed at renowned venues and clubs including Kater Blau, Klunkerkranich, Festsaal Kreuzberg, Fabrik 23, 3 Schwestern, Abby Mood, Copenhagen's Distortion Festival, and premier wedding venues like Lodge Kremmen.">
-                   In über 15 Jahren durfte ich bereits in verschiedensten renommierten Venues und Clubs auflegen – darunter im Kater Blau, Klunkerkranich, Festsaal Kreuzberg, in der Fabrik 23, bei den 3 Schwestern, im Abby Mood, auf dem Distortion Festival in Kopenhagen sowie in erstklassigen Hochzeitslocations wie der Lodge Kremmen.
+                <p data-de="In über 15 Jahren durfte ich bereits in verschiedensten renommierten Venues und Clubs auflegen – darunter im Kater Blau, Klunkerkranich, Festsaal Kreuzberg, in der Fabrik 23, bei den 3 Schwestern, im Abby Mood, auf dem Distortion Festival in Kopenhagen sowie in erstklassigen Hochzeitslocations wie der Lodge Kremmen. Dabei ist es ganz egal, ob ich für intime Runden mit 50 Gästen oder auf großen Partys mit 100 bis 200 Leuten spiele."
+                   data-en="Over the past 15+ years, I have performed at renowned venues and clubs including Kater Blau, Klunkerkranich, Festsaal Kreuzberg, Fabrik 23, 3 Schwestern, Abby Mood, Copenhagen's Distortion Festival, and premier wedding venues like Lodge Kremmen. I bring the same energy whether I am playing for an intimate crowd of 50 or larger parties with 100 to 200 people.">
+                   In über 15 Jahren durfte ich bereits in verschiedensten renommierten Venues und Clubs auflegen – darunter im Kater Blau, Klunkerkranich, Festsaal Kreuzberg, in der Fabrik 23, bei den 3 Schwestern, im Abby Mood, auf dem Distortion Festival in Kopenhagen sowie in erstklassigen Hochzeitslocations wie der Lodge Kremmen. Dabei ist es ganz egal, ob ich für intime Runden mit 50 Gästen oder auf großen Partys mit 100 bis 200 Leuten spiele.
                 </p>
 
                 <div class="benefits-box">
@@ -1147,19 +1153,6 @@
             }
             document.querySelectorAll('[data-' + lang + ']').forEach(el => { 
                 el.textContent = el.getAttribute('data-' + lang); 
-            });
-        }
-
-        // GA4 Conversion Tracking beim Formular-Absenden
-        const bookingForm = document.getElementById('booking-form');
-        if (bookingForm) {
-            bookingForm.addEventListener('submit', function() {
-                if (typeof gtag === 'function') {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'Engagement',
-                        'event_label': 'Booking Inquiry Form'
-                    });
-                }
             });
         }
     </script>
