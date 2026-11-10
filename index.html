@@ -1008,8 +1008,8 @@
     <!-- CALL TO ACTION BANNER -->
     <section class="cta-banner-section">
         <div class="cta-banner-container">
-            <h3 class="cta-banner-title" data-de="LASS MICH EUCH HELFEN EURE NACHT BESONDERS ZU MACHEN." data-en="LET ME HELP YOU MAKE YOUR NIGHT SPECIAL.">
-                LASS MICH EUCH HELFEN EURE NACHT BESONDERS ZU MACHEN.
+            <h3 class="cta-banner-title" data-de="Bereit für eine volle Tanzfläche?" data-en="Ready for a packed dance floor?">
+                Bereit für eine volle Tanzfläche?
             </h3>
             <a href="#booking" class="btn-primary" data-de="JETZT ANFRAGEN" data-en="INQUIRE NOW">JETZT ANFRAGEN</a>
         </div>
@@ -1217,7 +1217,6 @@
         <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="8e443660-2590-4aa0-9fc6-e6468074b785">
             <input type="hidden" name="subject" value="Neue Buchungsanfrage von DJ PRESS PETE Website">
-            <input type="hidden" name="redirect" value="https://presspete.com/danke.html">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
             <div class="form-group">
@@ -1251,9 +1250,13 @@
             </div>
             
             <div class="form-group full">
-                <button type="submit" class="btn-primary" style="width: 100%;" data-de="UNVERBINDLICH ANFRAGEN" data-en="SUBMIT REQUEST">UNVERBINDLICH ANFRAGEN</button>
-                <p class="form-response-note" data-de="Ich melde mich in der Regel innerhalb von 24 Stunden mit einem individuellen Angebot." data-en="I usually reply within 24 hours with a custom proposal.">
-                    Ich melde mich in der Regel innerhalb von 24 Stunden mit einem individuellen Angebot.
+                <button type="submit" id="submit-btn" class="btn-primary" style="width: 100%;" data-de="UNVERBINDLICH ANFRAGEN" data-en="SUBMIT REQUEST">UNVERBINDLICH ANFRAGEN</button>
+                
+                <!-- Statusmeldung nach Absenden -->
+                <div id="form-status" style="display: none; margin-top: 15px; padding: 16px; border-radius: 6px; font-weight: 600; text-align: center; font-size: 0.95rem;"></div>
+
+                <p id="form-note" class="form-response-note" data-de="Ich melde mich in der Regel innerhalb von 48 Stunden mit einem individuellen Angebot." data-en="I usually reply within 48 hours with a custom proposal.">
+                    Ich melde mich in der Regel innerhalb von 48 Stunden mit einem individuellen Angebot.
                 </p>
             </div>
         </form>
@@ -1296,6 +1299,8 @@
 
     <script>
         // MENÜ & SPRACHE
+        let currentLang = 'de';
+
         function toggleMenu() {
             const nav = document.getElementById('nav-menu');
             const toggleBtn = document.querySelector('.mobile-menu-toggle');
@@ -1311,6 +1316,7 @@
         }
 
         function setLanguage(lang) {
+            currentLang = lang;
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             if(lang === 'de') { 
                 document.querySelectorAll('.lang-btn')[0].classList.add('active'); 
@@ -1371,6 +1377,63 @@
                 gallery.addEventListener('mouseleave', () => isInteracting = false);
                 gallery.addEventListener('touchstart', () => isInteracting = true, {passive: true});
                 gallery.addEventListener('touchend', () => isInteracting = false);
+            }
+
+            // FORMULAR ABSENDEN OHNE SEITENWECHSEL (AJAX)
+            const form = document.getElementById('booking-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formStatus = document.getElementById('form-status');
+            const formNote = document.getElementById('form-note');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const initialBtnText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = currentLang === 'de' ? 'WIRD GESENDET...' : 'SENDING...';
+
+                    const formData = new FormData(form);
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status === 200) {
+                            // Erfolgsmeldung anzeigen
+                            formStatus.style.display = 'block';
+                            formStatus.style.background = 'rgba(46, 204, 113, 0.15)';
+                            formStatus.style.border = '1px solid #2ecc71';
+                            formStatus.style.color = '#2ecc71';
+
+                            formStatus.innerHTML = currentLang === 'de' 
+                                ? '✓ Danke für deine Anfrage! Ich habe deine Nachricht erhalten und melde mich innerhalb der nächsten 48 Stunden bei dir.' 
+                                : '✓ Thank you for your inquiry! I received your message and will get back to you within 48 hours.';
+
+                            form.reset();
+                            if (formNote) formNote.style.display = 'none';
+                        } else {
+                            throw new Error(json.message);
+                        }
+                    })
+                    .catch(error => {
+                        // Fehlermeldung anzeigen
+                        formStatus.style.display = 'block';
+                        formStatus.style.background = 'rgba(231, 76, 60, 0.15)';
+                        formStatus.style.border = '1px solid #e74c3c';
+                        formStatus.style.color = '#ff6b6b';
+
+                        formStatus.innerHTML = currentLang === 'de'
+                            ? 'Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreibe mir direkt an <a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: underline;">umitumlaut@gmail.com</a>.'
+                            : 'Something went wrong. Please try again or email me directly at <a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: underline;">umitumlaut@gmail.com</a>.';
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = initialBtnText;
+                    });
+                });
             }
         });
     </script>
