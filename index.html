@@ -6,19 +6,27 @@
     <title>DJ PRESS PETE | Hochzeit & Event DJ in Berlin, Kopenhagen & Mallorca</title>
     <meta name="description" content="Spezialisierter DJ für Hochzeiten, Corporate Events und private Feiern in Berlin, Kopenhagen und Mallorca. Disco, House, Funk, 80s/90s. Jetzt unverbindlich anfragen!">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) with GDPR Consent Mode -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWWT8GLFCK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       
-      // DSGVO / GDPR Consent Mode Default
+      // Default to denied for GDPR compliance
       gtag('consent', 'default', {
-        'analytics_storage': 'denied'
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied'
       });
 
       gtag('js', new Date());
       gtag('config', 'G-XWWT8GLFCK');
+
+      // Check if user previously granted consent
+      if (localStorage.getItem('cookie_consent') === 'granted') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
     </script>
     
     <!-- Schema.org Structured Data (Local SEO) -->
@@ -422,9 +430,9 @@
         .genre-badge {
             background: #ffffff;
             padding: 8px 16px;
-            border-radius: 8px;
             font-weight: 800;
             font-size: 0.85rem;
+            border-radius: 8px;
         }
 
         .track-record-card {
@@ -470,19 +478,19 @@
             overflow-x: auto;
             gap: 20px;
             padding: 0;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
             cursor: grab;
         }
         .gallery-scroll-container::-webkit-scrollbar {
-            display: none; /* Chrome, Safari */
+            display: none;
         }
         .gallery-scroll-container img {
             height: 320px;
             border-radius: 12px;
             object-fit: cover;
             flex-shrink: 0;
-            pointer-events: none; /* Verhindert Geist-Ziehen der Bilder beim Scrollen */
+            pointer-events: none;
         }
 
         .audio-grid {
@@ -640,6 +648,81 @@
             display: none;
         }
 
+        /* COOKIE BANNER STYLE */
+        .cookie-banner {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            max-width: 420px;
+            background: rgba(20, 22, 25, 0.96);
+            backdrop-filter: blur(14px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            z-index: 9999;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+            color: var(--text-light);
+            font-size: 0.88rem;
+        }
+
+        .cookie-banner.show {
+            display: flex;
+        }
+
+        .cookie-banner p {
+            line-height: 1.5;
+            color: #d1d5db;
+        }
+
+        .cookie-banner a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-btn-accept {
+            flex: 1;
+            background: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s;
+        }
+
+        .cookie-btn-accept:hover {
+            background: #e0e0e0;
+        }
+
+        .cookie-btn-decline {
+            flex: 1;
+            background: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border);
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s;
+        }
+
+        .cookie-btn-decline:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
         /* FOOTER */
         footer {
             padding: 60px 40px 40px 40px;
@@ -770,6 +853,13 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .cookie-banner {
+                left: 15px;
+                right: 15px;
+                bottom: 85px; /* Sits above sticky mobile booking button */
+                max-width: none;
+            }
         }
     </style>
 </head>
@@ -810,7 +900,6 @@
             <span class="marquee-item">3 Schwestern</span>
             <span class="marquee-item">Distortion Festival Copenhagen</span>
             <span class="marquee-item">Abby Mood</span>
-            <!-- Duplikat für nahtloses Loop-Scrollen -->
             <span class="marquee-item">Kater Blau</span>
             <span class="marquee-item">Klunkerkranich</span>
             <span class="marquee-item">Festsaal Kreuzberg</span>
@@ -930,7 +1019,6 @@
     <section class="section-light" style="padding-bottom: 60px;">
         <div class="section-header">
             <div>
-                <!-- Google Rating Badge -->
                 <a href="https://maps.app.goo.gl/fNouyr41Gjhi6P127" target="_blank" class="google-rating-pill">
                     <svg class="google-g-icon" viewBox="0 0 24 24">
                         <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -982,7 +1070,6 @@
     <section class="section-light" style="padding-top: 0; padding-bottom: 100px;">
         <div class="gallery-scroll-wrapper">
             <div class="gallery-scroll-container" id="auto-gallery">
-                <!-- Set 1 -->
                 <img src="galleri1.jpeg" alt="Event Impression 1">
                 <img src="galleri2.jpg" alt="Event Impression 2">
                 <img src="galleri3.jpeg" alt="Event Impression 3">
@@ -992,7 +1079,6 @@
                 <img src="galleri7.jpeg" alt="Event Impression 7">
                 <img src="galleri10.jpeg" alt="Event Impression 8">
                 <img src="galleri11.jpeg" alt="Event Impression 9">
-                <!-- Set 2 (Klon für den nahtlosen Loop) -->
                 <img src="galleri1.jpeg" alt="Event Impression 1">
                 <img src="galleri2.jpg" alt="Event Impression 2">
                 <img src="galleri3.jpeg" alt="Event Impression 3">
@@ -1090,7 +1176,7 @@
                 </div>
             </div>
 
-            <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-item" onclick="this.classList.toggle('Are there specific genres/songs you don\'t play?')">
                 <div class="faq-question">
                     <span data-de="Spielst du bestimmte Sachen nicht?" data-en="Are there specific genres/songs you don't play?">Spielst du bestimmte Sachen nicht?</span>
                     <span class="faq-toggle-icon">+</span>
@@ -1129,11 +1215,9 @@
         </div>
 
         <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Web3Forms Konfiguration & Weiterleitung auf Danke-Page -->
             <input type="hidden" name="access_key" value="8e443660-2590-4aa0-9fc6-e6468074b785">
             <input type="hidden" name="subject" value="Neue Buchungsanfrage von DJ PRESS PETE Website">
             <input type="hidden" name="redirect" value="https://presspete.com/danke.html">
-            <!-- Honeypot Spamschutz -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
             <div class="form-group">
@@ -1176,6 +1260,17 @@
     </section>
 
     <a href="#booking" class="btn-primary mobile-sticky-btn" data-de="TERMIN ANFRAGEN" data-en="INQUIRE NOW">TERMIN ANFRAGEN</a>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p id="cookie-text" data-de="Wir nutzen Cookies und Google Analytics, um die Website-Nutzung zu verstehen und dein Erlebnis zu verbessern. Mehr Infos in unserer <a href='datenschutz.html'>Datenschutzerklärung</a>." data-en="We use cookies and Google Analytics to understand website traffic and enhance your experience. Learn more in our <a href='datenschutz.html'>Privacy Policy</a>.">
+            Wir nutzen Cookies und Google Analytics, um die Website-Nutzung zu verstehen und dein Erlebnis zu verbessern. Mehr Infos in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn-accept" onclick="acceptCookies()" data-de="Akzeptieren" data-en="Accept">Akzeptieren</button>
+            <button class="cookie-btn-decline" onclick="declineCookies()" data-de="Ablehnen" data-en="Decline">Ablehnen</button>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-top">
@@ -1223,20 +1318,46 @@
                 document.querySelectorAll('.lang-btn')[1].classList.add('active'); 
             }
             document.querySelectorAll('[data-' + lang + ']').forEach(el => { 
-                el.textContent = el.getAttribute('data-' + lang); 
+                if (el.id === 'cookie-text') {
+                    el.innerHTML = el.getAttribute('data-' + lang);
+                } else {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
             });
         }
 
-        // BILDER GALERIE AUTO-SCROLL
+        // COOKIE BANNER LOGIC
+        function acceptCookies() {
+            localStorage.setItem('cookie_consent', 'granted');
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookie_consent', 'denied');
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
+            // Check if user has answered the cookie banner before
+            const consent = localStorage.getItem('cookie_consent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.add('show');
+            }
+
+            // BILDER GALERIE AUTO-SCROLL
             const gallery = document.getElementById('auto-gallery');
             if (gallery) {
                 let isInteracting = false;
                 
                 function autoScrollGallery() {
                     if (!isInteracting) {
-                        gallery.scrollLeft += 1; // Scroll-Geschwindigkeit
-                        // Zurücksetzen für Endlosschleife, wenn die Hälfte erreicht ist
+                        gallery.scrollLeft += 1;
                         if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
                             gallery.scrollLeft = 0;
                         }
@@ -1246,7 +1367,6 @@
                 
                 requestAnimationFrame(autoScrollGallery);
 
-                // Pausieren der Endlosschleife bei Berührung/Hover, um Drag & Swipe zu erlauben
                 gallery.addEventListener('mouseenter', () => isInteracting = true);
                 gallery.addEventListener('mouseleave', () => isInteracting = false);
                 gallery.addEventListener('touchstart', () => isInteracting = true, {passive: true});
