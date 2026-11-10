@@ -459,6 +459,32 @@
             line-height: 1.2;
         }
 
+        /* BILDER GALERIE SCROLL STYLE */
+        .gallery-scroll-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 0;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            cursor: grab;
+        }
+        .gallery-scroll-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
+        .gallery-scroll-container img {
+            height: 320px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+            pointer-events: none; /* Verhindert Geist-Ziehen der Bilder beim Scrollen */
+        }
+
         .audio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -727,6 +753,10 @@
                 padding: 60px 20px; 
             }
 
+            .gallery-scroll-container img {
+                height: 220px;
+            }
+
             .mobile-sticky-btn {
                 display: block;
                 position: fixed;
@@ -838,6 +868,7 @@
                         <li data-de="Zuverlässigkeit & Pünktlichkeit" data-en="Reliability & punctuality">Zuverlässigkeit & Pünktlichkeit</li>
                         <li data-de="Motivation bis der letzte Gast die Tanzfläche verlässt" data-en="100% Energy until the very last guest leaves">Motivation bis der letzte Gast die Tanzfläche verlässt</li>
                         <li data-de="Professionelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)" data-en="Professional DJ gear (Laptop, MIDI Controller, Mixer)">Professionelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)</li>
+                        <li data-de="Auf Wunsch Miete von SOUNDBOKS möglich" data-en="SOUNDBOKS rental available on request">Auf Wunsch Miete von SOUNDBOKS möglich</li>
                     </ul>
                 </div>
             </div>
@@ -856,8 +887,11 @@
                     <span class="genre-badge">BOOGIE</span>
                     <span class="genre-badge">WORLD</span>
                     <span class="genre-badge">70S</span>
-                    <span class="genre-badge">80S / 90S</span>
+                    <span class="genre-badge">80S</span>
+                    <span class="genre-badge">90S</span>
                     <span class="genre-badge">00S</span>
+                    <span class="genre-badge">RNB</span>
+                    <span class="genre-badge">SOUL</span>
                     <span class="genre-badge">RAP & FUNK</span>
                     <span class="genre-badge">INDIE</span>
                     <span class="genre-badge">ROCK</span>
@@ -868,8 +902,16 @@
             </div>
             <div class="track-record-card">
                 <b>[ TRACK RECORD ]</b>
-                <div style="font-size: 2.5rem; font-weight: 800; margin-top: 20px;">15+ JAHRE</div>
-                <div style="font-size: 0.8rem; color: #888;" data-de="ÜBER 500 GIGS & EVENTS" data-en="OVER 500 GIGS & EVENTS">ÜBER 500 GIGS & EVENTS</div>
+                <div>
+                    <div style="font-size: 2.2rem; font-weight: 800; margin-top: 20px; line-height: 1;">15 JAHRE</div>
+                    <div style="font-size: 0.8rem; color: #888; margin-bottom: 20px;" data-de="ERFAHRUNG" data-en="EXPERIENCE">ERFAHRUNG</div>
+                    
+                    <div style="font-size: 2.2rem; font-weight: 800; line-height: 1;">50+</div>
+                    <div style="font-size: 0.8rem; color: #888; margin-bottom: 20px;" data-de="HOCHZEIT GIGS" data-en="WEDDING GIGS">HOCHZEIT GIGS</div>
+                    
+                    <div style="font-size: 2.2rem; font-weight: 800; line-height: 1;">500+</div>
+                    <div style="font-size: 0.8rem; color: #888;" data-de="BAR UND CLUB GIGS" data-en="BAR AND CLUB GIGS">BAR UND CLUB GIGS</div>
+                </div>
             </div>
         </div>
     </section>
@@ -885,7 +927,7 @@
     </section>
 
     <!-- WAS ANDERE SAGEN -->
-    <section class="section-light">
+    <section class="section-light" style="padding-bottom: 60px;">
         <div class="section-header">
             <div>
                 <!-- Google Rating Badge -->
@@ -932,6 +974,34 @@
                     </p>
                 </div>
                 <br><b>Dominik</b>
+            </div>
+        </div>
+    </section>
+
+    <!-- BILDER GALERIE (AUTO-SCROLL & SWIPE) -->
+    <section class="section-light" style="padding-top: 0; padding-bottom: 100px;">
+        <div class="gallery-scroll-wrapper">
+            <div class="gallery-scroll-container" id="auto-gallery">
+                <!-- Set 1 -->
+                <img src="galleri1.jpeg" alt="Event Impression 1">
+                <img src="galleri2.jpg" alt="Event Impression 2">
+                <img src="galleri3.jpeg" alt="Event Impression 3">
+                <img src="galleri4.jpeg" alt="Event Impression 4">
+                <img src="galleri5.jpeg" alt="Event Impression 5">
+                <img src="galleri6.jpeg" alt="Event Impression 6">
+                <img src="galleri7.jpeg" alt="Event Impression 7">
+                <img src="galleri10.jpeg" alt="Event Impression 8">
+                <img src="galleri11.jpeg" alt="Event Impression 9">
+                <!-- Set 2 (Klon für den nahtlosen Loop) -->
+                <img src="galleri1.jpeg" alt="Event Impression 1">
+                <img src="galleri2.jpg" alt="Event Impression 2">
+                <img src="galleri3.jpeg" alt="Event Impression 3">
+                <img src="galleri4.jpeg" alt="Event Impression 4">
+                <img src="galleri5.jpeg" alt="Event Impression 5">
+                <img src="galleri6.jpeg" alt="Event Impression 6">
+                <img src="galleri7.jpeg" alt="Event Impression 7">
+                <img src="galleri10.jpeg" alt="Event Impression 8">
+                <img src="galleri11.jpeg" alt="Event Impression 9">
             </div>
         </div>
     </section>
@@ -1130,6 +1200,7 @@
     </footer>
 
     <script>
+        // MENÜ & SPRACHE
         function toggleMenu() {
             const nav = document.getElementById('nav-menu');
             const toggleBtn = document.querySelector('.mobile-menu-toggle');
@@ -1155,6 +1226,33 @@
                 el.textContent = el.getAttribute('data-' + lang); 
             });
         }
+
+        // BILDER GALERIE AUTO-SCROLL
+        document.addEventListener("DOMContentLoaded", () => {
+            const gallery = document.getElementById('auto-gallery');
+            if (gallery) {
+                let isInteracting = false;
+                
+                function autoScrollGallery() {
+                    if (!isInteracting) {
+                        gallery.scrollLeft += 1; // Scroll-Geschwindigkeit
+                        // Zurücksetzen für Endlosschleife, wenn die Hälfte erreicht ist
+                        if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+                            gallery.scrollLeft = 0;
+                        }
+                    }
+                    requestAnimationFrame(autoScrollGallery);
+                }
+                
+                requestAnimationFrame(autoScrollGallery);
+
+                // Pausieren der Endlosschleife bei Berührung/Hover, um Drag & Swipe zu erlauben
+                gallery.addEventListener('mouseenter', () => isInteracting = true);
+                gallery.addEventListener('mouseleave', () => isInteracting = false);
+                gallery.addEventListener('touchstart', () => isInteracting = true, {passive: true});
+                gallery.addEventListener('touchend', () => isInteracting = false);
+            }
+        });
     </script>
 </body>
 </html>
