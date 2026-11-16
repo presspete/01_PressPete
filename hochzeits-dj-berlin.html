@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hochzeits-DJ Berlin & Brandenburg | DJ PRESS PETE</title>
+    <meta name="description" content="Spezialisierter DJ für Hochzeiten, Corporate Events und private Feiern in Berlin, Kopenhagen und Mallorca. Disco, House, Funk, 80s/90s. Jetzt unverbindlich anfragen!">
+
+    <!-- Google tag (gtag.js) with GDPR Consent Mode -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWWT8GLFCK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-XWWT8GLFCK');
+      if (localStorage.getItem('cookie_consent') === 'granted') {
+        gtag('consent', 'update', {'analytics_storage': 'granted'});
+      }
+    </script>
+    
+    <!-- Schema.org Structured Data (Local SEO & KI-Optimierung) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DJ PRESS PETE",
+      "image": "https://presspete.com/share-preview.jpg",
+      "url": "https://presspete.com/",
+      "email": "umitumlaut@gmail.com",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": ["Berlin", "Brandenburg", "Copenhagen", "Palma de Mallorca"],
+      "knowsLanguage": ["German", "English", "Danish"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "15"
+      },
+      "sameAs": [
+        "https://www.instagram.com/presspete/",
+        "https://soundcloud.com/presspete"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org FAQ (KIs und Google lieben FAQs) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist dein Preis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jedes Event ist individuell, daher kalkuliere ich transparent nach Umfang, Spieldauer und Ort. Schickt mir einfach eure Infos über das Formular und ihr erhaltet ein unverbindliches Angebot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Können wir uns vorab kennenlernen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um die Abstimmung für euch so flexibel und zeitsparend wie möglich zu halten, biete ich einen Videocall an. So können wir alle Details in Ruhe besprechen – egal wo ihr gerade seid. Das hat bisher immer gut funktioniert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bringst du eine Anlage mit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ich biete eine SoundBoks 4 an, die ich direkt mitbringe. Perfekt für Partys mit 50–80 Gästen. Bei größeren Locations berate ich euch gerne zum Verleih vor Ort. Preis: 100 Euro für einen Abend."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://presspete.com/">
+    <meta property="og:title" content="DJ PRESS PETE | Hochzeits- & Event-DJ">
+    <meta property="og:description" content="Hej! Ich bin Peter. Spezialisierter DJ für Hochzeiten und Events in Berlin, Kopenhagen und Mallorca.">
+    <meta property="og:image" content="https://presspete.com/share-preview.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0b0d;
+            --bg-card: #141619;
+            --bg-light: #f4f4f2;
+            --text-dark: #111111;
+            --text-light: #f4f4f2;
+            --text-muted: #8e8e93;
+            --border: rgba(255, 255, 255, 0.12);
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-dark); color: var(--text-light); font-family: var(--font-body); line-height: 1.6; width: 100%; }
+
+        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--text-light); text-decoration: none; text-transform: uppercase; }
+        
+        nav { display: flex; gap: 30px; align-items: center; }
+        nav a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; opacity: 0.8; transition: opacity 0.2s; }
+        nav a:hover { opacity: 1; }
+
+        .lang-switch { display: flex; gap: 5px; background: rgba(255, 255, 255, 0.1); padding: 4px; border-radius: 20px; border: 1px solid var(--border); }
+        .lang-btn { background: none; border: none; color: var(--text-light); padding: 4px 10px; border-radius: 14px; cursor: pointer; font-size: 0.75rem; font-weight: 700; opacity: 0.6; transition: all 0.2s; }
+        .lang-btn.active { background: #ffffff; color: #000000; opacity: 1; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: var(--text-light); font-size: 1.8rem; cursor: pointer; padding: 5px; line-height: 1; }
+
+        .hero { position: relative; min-height: 100vh; padding: 140px 40px 60px 40px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(10, 11, 13, 0.4) 0%, rgba(10, 11, 13, 0.85) 100%), url('4b6c226f-37bf-40d3-83ad-4597f8f88249.jpeg') center/cover no-repeat; }
+        .hero-tag { font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; font-weight: 600; letter-spacing: 0.05em; }
+        
+        .hero-title { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 4rem); font-weight: 800; text-transform: uppercase; max-width: 1200px; margin-bottom: 15px; line-height: 1.1; }
+        .hero-subtitle { font-size: clamp(1rem, 1.5vw, 1.25rem); font-weight: 600; color: #d1d5db; max-width: 800px; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 0.02em; }
+
+        .btn-primary { display: inline-block; background: #ffffff; color: #000000; padding: 16px 32px; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; text-decoration: none; border: none; cursor: pointer; transition: transform 0.2s, background-color 0.2s; }
+        .btn-primary:hover { transform: translateY(-2px); background: #e0e0e0; }
+
+        .marquee-container { background: #111317; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0; overflow: hidden; white-space: nowrap; display: flex; position: relative; }
+        .marquee-content { display: inline-flex; gap: 40px; animation: marquee 28s linear infinite; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--text-muted); text-transform: uppercase; }
+        .marquee-item { display: inline-flex; align-items: center; gap: 40px; }
+        .marquee-item::after { content: "•"; color: #ffffff; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .section-light { background-color: var(--bg-light); color: var(--text-dark); padding: 100px 40px; }
+        .section-dark { background-color: var(--bg-dark); color: var(--text-light); padding: 100px 40px; }
+        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; border-bottom: 2px solid currentColor; padding-bottom: 20px; }
+        .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; text-transform: uppercase; line-height: 1; }
+
+        .google-rating-pill { display: inline-flex; align-items: center; gap: 12px; background: #ffffff; border: 1px solid rgba(0,0,0,0.1); padding: 8px 18px; border-radius: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-decoration: none; color: #111; font-weight: 700; font-size: 0.9rem; transition: transform 0.2s; }
+        .google-rating-pill:hover { transform: translateY(-2px); }
+        .google-g-icon { width: 18px; height: 18px; }
+
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .review-card { background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; }
+        .review-stars { color: #f5a623; margin-bottom: 15px; }
+
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .about-image img { width: 100%; border-radius: 12px; object-fit: cover; }
+        .bio-text p { margin-bottom: 20px; font-size: 1.05rem; color: #333; }
+
+        .benefits-box { background: #ffffff; padding: 25px; border-radius: 12px; margin-top: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .benefits-box h4 { font-family: var(--font-display); margin-bottom: 15px; text-transform: uppercase; font-size: 1.1rem; }
+        .benefits-list { list-style: none; }
+        .benefits-list li { position: relative; padding-left: 28px; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; }
+        .benefits-list li::before { content: "✓"; position: absolute; left: 0; color: #000; font-weight: 900; }
+
+        .genre-section-grid { display: grid; grid-template-columns: 280px 1fr 1fr; gap: 30px; margin-top: 60px; }
+        .genre-portrait-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+        .genre-card { background: #efefe0; padding: 30px; border-radius: 16px; }
+        .genre-tags-wrapper { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .genre-badge { background: #ffffff; padding: 8px 16px; font-weight: 800; font-size: 0.85rem; border-radius: 8px; }
+
+        .track-record-card { background: #111317; color: #ffffff; padding: 30px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; }
+
+        .cta-banner-section { background-color: #0f1013; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 60px 40px; text-align: center; }
+        .cta-banner-container { max-width: 800px; margin: 0 auto; }
+        .cta-banner-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; text-transform: uppercase; margin-bottom: 25px; line-height: 1.2; }
+
+        .gallery-scroll-wrapper { width: 100%; overflow: hidden; position: relative; }
+        .gallery-scroll-container { display: flex; overflow-x: auto; gap: 20px; padding: 0; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; }
+        .gallery-scroll-container::-webkit-scrollbar { display: none; }
+        .gallery-scroll-container img { height: 320px; border-radius: 12px; object-fit: cover; flex-shrink: 0; pointer-events: none; }
+
+        .audio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .audio-card { background: var(--bg-card); border: 1px solid var(--border); padding: 25px; border-radius: 8px; }
+        .audio-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .tag { background: rgba(255, 255, 255, 0.08); font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; color: var(--text-muted); }
+        audio { width: 100%; height: 40px; }
+        .soundcloud-widget-container { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+
+        .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; cursor: pointer; }
+        .faq-question { font-size: 1.2rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { margin-top: 15px; color: var(--text-muted); display: none; line-height: 1.6; font-size: 1rem; }
+        .faq-answer a { color: #ffffff; text-decoration: underline; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-toggle-icon { transform: rotate(45deg); }
+        .faq-toggle-icon { font-size: 1.5rem; transition: transform 0.2s; }
+
+        .availability-badge { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); padding: 16px 24px; border-radius: 8px; margin-bottom: 30px; display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #f4f4f2; }
+        .availability-dot { width: 10px; height: 10px; border-radius: 50%; background: #2ecc71; box-shadow: 0 0 10px #2ecc71; flex-shrink: 0; }
+
+        .booking-form { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+        .form-group.full { grid-column: 1 / -1; }
+        input, textarea, select { background: #1e2126; border: 1px solid var(--border); padding: 14px; color: #fff; border-radius: 4px; font-family: inherit; }
+        .form-response-note { font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 8px; }
+
+        .mobile-sticky-btn { display: none; }
+
+        .cookie-banner { position: fixed; bottom: 24px; left: 24px; max-width: 420px; background: rgba(20, 22, 25, 0.96); backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: 12px; padding: 22px; z-index: 9999; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6); display: none; flex-direction: column; gap: 16px; color: var(--text-light); font-size: 0.88rem; }
+        .cookie-banner.show { display: flex; }
+        .cookie-banner p { line-height: 1.5; color: #d1d5db; }
+        .cookie-banner a { color: #ffffff; text-decoration: underline; }
+        .cookie-buttons { display: flex; gap: 10px; }
+        .cookie-btn-accept { flex: 1; background: #ffffff; color: #000000; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; text-transform: uppercase; transition: background 0.2s; }
+        .cookie-btn-accept:hover { background: #e0e0e0; }
+        .cookie-btn-decline { flex: 1; background: transparent; color: var(--text-light); border: 1px solid var(--border); padding: 10px 16px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer; text-transform: uppercase; transition: background 0.2s; }
+        .cookie-btn-decline:hover { background: rgba(255, 255, 255, 0.08); }
+
+        footer { padding: 60px 40px 40px 40px; background: #000; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 30px; }
+        .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.8rem; color: var(--text-muted); flex-wrap: wrap; gap: 15px; }
+        .footer-legal-links { display: flex; gap: 20px; }
+        .footer-legal-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        .footer-legal-links a:hover { color: #ffffff; text-decoration: underline; }
+        .social-link-ig { display: inline-flex; align-items: center; gap: 8px; color: var(--text-light); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: opacity 0.2s; }
+        .social-link-ig:hover { opacity: 0.7; }
+
+        @media (max-width: 900px) {
+            .genre-section-grid, .about-grid, .booking-form { grid-template-columns: 1fr; }
+            header { padding: 15px 20px; justify-content: start; gap: 15px; }
+            .logo { font-size: 1.1rem; }
+            .mobile-menu-toggle { display: block; font-size: 1.5rem; }
+            nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 11, 13, 0.98); backdrop-filter: blur(15px); flex-direction: column; padding: 30px 20px; gap: 20px; border-bottom: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+            nav.open { display: flex; }
+            nav a { font-size: 1.1rem; }
+            .hero { padding: 120px 20px 40px 20px; }
+            .section-light, .section-dark, .cta-banner-section { padding: 60px 20px; }
+            .gallery-scroll-container img { height: 220px; }
+            .mobile-sticky-btn { display: block; position: fixed; bottom: 20px; right: 20px; z-index: 99; box-shadow: 0 6px 20px rgba(0,0,0,0.6); }
+            .footer-bottom { flex-direction: column; align-items: flex-start; }
+            .cookie-banner { left: 15px; right: 15px; bottom: 85px; max-width: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">DJ PRESS PETE</a>
+        <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+        <nav id="nav-menu">
+            <a href="#about" onclick="closeMenu()" data-de="ÜBER MICH" data-en="ABOUT">ÜBER MICH</a>
+            <a href="#music" onclick="closeMenu()" data-de="LIVE AUFNAHMEN UND MIXES" data-en="LIVE RECORDINGS & MIXES">LIVE AUFNAHMEN UND MIXES</a>
+            <a href="#booking" onclick="closeMenu()" data-de="ANFRAGEN" data-en="INQUIRE">ANFRAGEN</a>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="setLanguage('de')">DE</button>
+                <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-tag" data-de="[ HOCHZEIT & EVENT DJ • BERLIN • COPENHAGEN • MALLORCA ]" data-en="[ WEDDING & EVENT DJ • BERLIN • COPENHAGEN • MALLORCA ]">[ HOCHZEIT & EVENT DJ • BERLIN • COPENHAGEN • MALLORCA ]</div>
+        
+        <h1 class="hero-title" data-de="HOCHZEITS- & EVENT-DJ IN BERLIN & BRANDENBURG" data-en="WEDDING & EVENT DJ IN BERLIN & BRANDENBURG">
+            HOCHZEITS- & EVENT-DJ IN BERLIN & BRANDENBURG
+        </h1>
+        <p class="hero-subtitle" data-de="HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ." data-en="HEJ! I AM PETER. 50% DANISH, 50% GERMAN AND 100% PASSIONATE DJ.">
+            HEJ! ICH BIN PETER. 50% DÄNISCH, 50% DEUTSCH UND 100% LEIDENSCHAFTLICHER DJ.
+        </p>
+
+        <div>
+            <a href="#booking" class="btn-primary" data-de="JETZT ANFRAGEN" data-en="INQUIRE NOW">JETZT ANFRAGEN</a>
+        </div>
+    </section>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span class="marquee-item">Kater Blau</span>
+            <span class="marquee-item">Klunkerkranich</span>
+            <span class="marquee-item">Festsaal Kreuzberg</span>
+            <span class="marquee-item">Fabrik 23</span>
+            <span class="marquee-item">Lodge Kremmen</span>
+            <span class="marquee-item">3 Schwestern</span>
+            <span class="marquee-item">Distortion Festival Copenhagen</span>
+            <span class="marquee-item">Abby Mood</span>
+            <span class="marquee-item">Kater Blau</span>
+            <span class="marquee-item">Klunkerkranich</span>
+            <span class="marquee-item">Festsaal Kreuzberg</span>
+            <span class="marquee-item">Fabrik 23</span>
+            <span class="marquee-item">Lodge Kremmen</span>
+            <span class="marquee-item">3 Schwestern</span>
+            <span class="marquee-item">Distortion Festival Copenhagen</span>
+            <span class="marquee-item">Abby Mood</span>
+        </div>
+    </div>
+
+    <section id="about" class="section-light" style="background-color: #f8f8f6;">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="profilbild.jpg" alt="DJ PRESS PETE Schwarz-Weiß Porträt mit Cap">
+            </div>
+            <div class="bio-text">
+                <h2 class="section-title" style="margin-bottom: 25px;" data-de="ÜBER MICH" data-en="ABOUT ME">ÜBER MICH</h2>
+                
+                <p data-de="Schon seit meiner Kindheit liebe und lebe ich Musik. Heute bin ich in Berlin-Kreuzberg zu Hause. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs." 
+                   data-en="Ever since I was a kid, music has been my passion. Today, I am based in Kreuzberg, Berlin. Moving to the city in my early twenties, I fell in love with the electronic music scene and quickly started DJing in local bars and clubs.">
+                   Schon seit meiner Kindheit liebe und lebe ich Musik. Heute bin ich in Berlin-Kreuzberg zu Hause. Als ich mit Anfang 20 nach Berlin zog, verfiel ich schnell der elektronischen Musikszene und spielte innerhalb kurzer Zeit in ersten Berliner Bars und Clubs.
+                </p>
+
+                <p data-de="Da ich musikalisch sehr breit aufgestellt bin, reichte mir ein reines Techno-Set irgendwann nicht mehr aus. Vor 5 Jahren überredeten mich gute Kumpels hartnäckig, auf der Hochzeit von Freunden aufzulegen und der Rest ist Geschichte." 
+                   data-en="Because of my broad taste in music, 3-hour pure techno sets were not enough. 5 years ago, close friends convinced me to play at a wedding and the rest is history.">
+                   Da ich musikalisch sehr breit aufgestellt bin, reichte mir ein reines Techno-Set irgendwann nicht mehr aus. Vor 5 Jahren überredeten mich gute Kumpels hartnäckig, auf der Hochzeit von Freunden aufzulegen und der Rest ist Geschichte.
+                </p>
+
+                <p data-de="Bei einer Hochzeit geht es darum, alle Generationen zum Tanzen zu bringen und die Persönlichkeit des Paares musikalisch zu spiegeln. Man ist stimmungsvoller Gastgeber, begeistert mit frischer Musik, schafft nahtlose Übergänge und fungiert gleichzeitig als musikalischer Türsteher, falls Tante Ingrid wieder Schlager hören möchte." 
+                   data-en="At a wedding, it is all about getting everyone dancing while reflecting the couple's personality. You bring energy, connect generations, create seamless transitions, and act as a musical bouncer when Aunt Ingrid requests cheesy party tunes.">
+                   Bei einer Hochzeit geht es darum, alle Generationen zum Tanzen zu bringen und die Persönlichkeit des Paares musikalisch zu spiegeln. Man ist stimmungsvoller Gastgeber, begeistert mit frischer Musik, schafft nahtlose Übergänge und fungiert gleichzeitig als musikalischer Türsteher, falls Tante Ingrid wieder Schlager hören möchte.
+                </p>
+
+                <p data-de="Ich weiß genau, wie wichtig dieser Tag ist: Als ich 2020 selbst geheiratet habe, durfte ich erleben, wie entscheidend ein vertrauensvoller DJ ist. Jemand, der nicht nur selbst Spaß hat, sondern da ist um Leute zusammenzubringen, sich selbst in den Hintergrund zu stellen und das Beste aus diesem besonderen Moment rauszuholen." 
+                   data-en="I know how important this day is: Having married in 2020 myself, I experienced firsthand how essential a trusted DJ is. Someone who isn't just having fun themselves, but is there to bring people together, stay in the background, and make the absolute most of this special moment.">
+                   Ich weiß genau, wie wichtig dieser Tag ist: Als ich 2020 selbst geheiratet habe, durfte ich erleben, wie entscheidend ein vertrauensvoller DJ ist. Jemand, der nicht nur selbst Spaß hat, sondern da ist um Leute zusammenzubringen, sich selbst in den Hintergrund zu stellen und das Beste aus diesem besonderen Moment rauszuholen.
+                </p>
+
+                <p data-de="Dieser Tag gehört euch! Meine Priorität ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure individuellen Wünsche und Genres." 
+                   data-en="This day belongs to you! My priority is playing music that keeps you and your guests happy. I am always open to your personal track requests and genres.">
+                   Dieser Tag gehört euch! Meine Priorität ist es, Musik zu spielen, die euch und eure Gäste in perfekte Stimmung bringt. Ich bin offen für eure individuellen Wünsche und Genres.
+                </p>
+
+                <p data-de="In über 15 Jahren durfte ich bereits in verschiedensten renommierten Berliner Venues und Clubs auflegen – darunter im Kater Blau, Klunkerkranich, Festsaal Kreuzberg, in der Fabrik 23, bei den 3 Schwestern, im Abby Mood, auf dem Distortion Festival in Kopenhagen sowie in erstklassigen Hochzeitslocations wie der Lodge Kremmen. Dabei ist es ganz egal, ob ich für intime Runden mit 50 Gästen oder auf großen Partys mit 100 bis 200 Leuten spiele."
+                   data-en="Over the past 15+ years, I have performed at renowned venues and clubs including Kater Blau, Klunkerkranich, Festsaal Kreuzberg, Fabrik 23, 3 Schwestern, Abby Mood, Copenhagen's Distortion Festival, and premier wedding venues like Lodge Kremmen. I bring the same energy whether I am playing for an intimate crowd of 50 or larger parties with 100 to 200 people.">
+                   In über 15 Jahren durfte ich bereits in verschiedensten renommierten Berliner Venues und Clubs auflegen – darunter im Kater Blau, Klunkerkranich, Festsaal Kreuzberg, in der Fabrik 23, bei den 3 Schwestern, im Abby Mood, auf dem Distortion Festival in Kopenhagen sowie in erstklassigen Hochzeitslocations wie der Lodge Kremmen. Dabei ist es ganz egal, ob ich für intime Runden mit 50 Gästen oder auf großen Partys mit 100 bis 200 Leuten spiele.
+                </p>
+
+                <div class="benefits-box">
+                    <h4 data-de="WAS IHR BEKOMMT:" data-en="WHAT YOU GET:">WAS IHR BEKOMMT:</h4>
+                    <ul class="benefits-list">
+                        <li data-de="Absolute Freundlichkeit & persönliche Abstimmung" data-en="Friendly & personal communication">Absolute Freundlichkeit & persönliche Abstimmung</li>
+                        <li data-de="Zuverlässigkeit & Pünktlichkeit" data-en="Reliability & punctuality">Zuverlässigkeit & Pünktlichkeit</li>
+                        <li data-de="Motivation bis der letzte Gast die Tanzfläche verlässt" data-en="100% Energy until the very last guest leaves">Motivation bis der letzte Gast die Tanzfläche verlässt</li>
+                        <li data-de="Professionelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)" data-en="Professional DJ gear (Laptop, MIDI Controller, Mixer)">Professionelles DJ-Equipment (Laptop, MIDI-Controller, Mixer)</li>
+                        <li data-de="Auf Wunsch Miete von SOUNDBOKS möglich" data-en="SOUNDBOKS rental available on request">Auf Wunsch Miete von SOUNDBOKS möglich</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="genre-section-grid">
+            <div class="genre-portrait-card">
+                <img src="e6b1d0a4-8b8f-4faa-9715-5f0836656094.jpeg" alt="DJ PRESS PETE Farbfoto">
+            </div>
+            <div class="genre-card">
+                <b>[ GENRE SPECTRUM ]</b>
+                <div class="genre-tags-wrapper">
+                    <span class="genre-badge">DISCO</span>
+                    <span class="genre-badge">ITALO</span>
+                    <span class="genre-badge">NEW WAVE</span>
+                    <span class="genre-badge">BOOGIE</span>
+                    <span class="genre-badge">WORLD</span>
+                    <span class="genre-badge">70S</span>
+                    <span class="genre-badge">80S</span>
+                    <span class="genre-badge">90S</span>
+                    <span class="genre-badge">00S</span>
+                    <span class="genre-badge">RNB</span>
+                    <span class="genre-badge">SOUL</span>
+                    <span class="genre-badge">RAP & FUNK</span>
+                    <span class="genre-badge">INDIE</span>
+                    <span class="genre-badge">ROCK</span>
+                    <span class="genre-badge">HOUSE & DEEP</span>
+                    <span class="genre-badge">COSMIC HOUSE</span>
+                    <span class="genre-badge">TECHNO & TRANCE</span>
+                </div>
+            </div>
+            <div class="track-record-card">
+                <b>[ TRACK RECORD ]</b>
+                <div>
+                    <div style="font-size: 2.2rem; font-weight: 800; margin-top: 20px; line-height: 1;">15 JAHRE</div>
+                    <div style="font-size: 0.8rem; color: #888; margin-bottom: 20px;" data-de="ERFAHRUNG" data-en="EXPERIENCE">ERFAHRUNG</div>
+                    
+                    <div style="font-size: 2.2rem; font-weight: 800; line-height: 1;">50+</div>
+                    <div style="font-size: 0.8rem; color: #888; margin-bottom: 20px;" data-de="HOCHZEIT GIGS" data-en="WEDDING GIGS">HOCHZEIT GIGS</div>
+                    
+                    <div style="font-size: 2.2rem; font-weight: 800; line-height: 1;">500+</div>
+                    <div style="font-size: 0.8rem; color: #888;" data-de="BAR UND CLUB GIGS" data-en="BAR AND CLUB GIGS">BAR UND CLUB GIGS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="cta-banner-section">
+        <div class="cta-banner-container">
+            <h3 class="cta-banner-title" data-de="Bereit für eine volle Tanzfläche?" data-en="Ready for a packed dance floor?">
+                Bereit für eine volle Tanzfläche?
+            </h3>
+            <a href="#booking" class="btn-primary" data-de="JETZT ANFRAGEN" data-en="INQUIRE NOW">JETZT ANFRAGEN</a>
+        </div>
+    </section>
+
+    <!-- WAS ANDERE SAGEN -->
+    <section class="section-light" style="padding-bottom: 60px;">
+        <div class="section-header">
+            <div>
+                <a href="https://maps.app.goo.gl/fNouyr41Gjhi6P127" target="_blank" class="google-rating-pill">
+                    <svg class="google-g-icon" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                    </svg>
+                    <span>5.0 ★★★★★ AUF GOOGLE</span>
+                </a>
+                <h2 class="section-title" data-de="WAS ANDERE SAGEN" data-en="WHAT OTHERS SAY">WAS ANDERE SAGEN</h2>
+            </div>
+            <a href="https://maps.app.goo.gl/fNouyr41Gjhi6P127" target="_blank" style="color: var(--text-dark); font-weight: 700;" data-de="ALLE GOOGLE BEWERTUNGEN LESEN ↗" data-en="READ ALL GOOGLE REVIEWS ↗">ALLE GOOGLE BEWERTUNGEN LESEN ↗</a>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p data-de="&quot;Pete war der perfekte DJ für unsere Hochzeit. Super Kommunikation vorab, sehr entspannt am Abend und klasse Musik. Bei der nächsten Party auf jeden Fall wieder auf unserer Liste !&quot;"
+                       data-en="&quot;Pete was the perfect DJ for our wedding. Great communication in advance, super relaxed during the evening and awesome music. Definitely on our list for the next party!&quot;">
+                       "Pete war der perfekte DJ für unsere Hochzeit. Super Kommunikation vorab, sehr entspannt am Abend und klasse Musik. Bei der nächsten Party auf jeden Fall wieder auf unserer Liste !"
+                    </p>
+                </div>
+                <br><b>Anna</b>
+            </div>
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p data-de="&quot;Peter war DJ auf unserer Hochzeit und wir waren wirklich mehr als zufrieden! Die Kommunikation war von Anfang an total unkompliziert und sympathisch. Er hat ein super Gespür für die Stimmung gehabt, ist auf unsere Wünsche eingegangen und hat dafür gesorgt, dass die Tanzfläche immer gut gefüllt war.&quot;"
+                       data-en="&quot;Peter was the DJ at our wedding and we were more than satisfied! Communication was super easy and warm from the start. He had a great feel for the vibe, accommodated all our requests and kept the dance floor packed all night.&quot;">
+                       "Peter war DJ auf unserer Hochzeit und wir waren wirklich mehr als zufrieden! Die Kommunikation war von Anfang an total unkompliziert und sympathisch. Er hat ein super Gespür für die Stimmung gehabt, ist auf unsere Wünsche eingegangen und hat dafür gesorgt, dass die Tanzfläche immer gut gefüllt war."
+                    </p>
+                </div>
+                <br><b>Sophia & Jorgo</b>
+            </div>
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p data-de="&quot;Peter hat auf meiner Hochzeit gespielt und dem Abend die richtige Stimmung verliehen. Es war ein großartiger Abend und Peter hat ihm das gewisse etwas verliehen.&quot;"
+                       data-en="&quot;Peter played at my wedding and brought the exact right atmosphere to the evening. It was a fantastic night and Peter gave it that special something.&quot;">
+                       "Peter hat auf meiner Hochzeit gespielt und dem Abend die richtige Stimmung verliehen. Es war ein großartiger Abend und Peter hat ihm das gewisse etwas verliehen."
+                    </p>
+                </div>
+                <br><b>Dominik</b>
+            </div>
+        </div>
+    </section>
+
+    <!-- BILDER GALERIE (AUTO-SCROLL & SWIPE) -->
+    <section class="section-light" style="padding-top: 0; padding-bottom: 100px;">
+        <div class="gallery-scroll-wrapper">
+            <div class="gallery-scroll-container" id="auto-gallery">
+                <img src="galleri1.jpeg" alt="Event Impression 1">
+                <img src="galleri2.jpg" alt="Event Impression 2">
+                <img src="galleri3.jpeg" alt="Event Impression 3">
+                <img src="galleri4.jpeg" alt="Event Impression 4">
+                <img src="galleri5.jpeg" alt="Event Impression 5">
+                <img src="galleri6.jpeg" alt="Event Impression 6">
+                <img src="galleri7.jpeg" alt="Event Impression 7">
+                <img src="galleri10.jpeg" alt="Event Impression 8">
+                <img src="galleri11.jpeg" alt="Event Impression 9">
+                <img src="galleri1.jpeg" alt="Event Impression 1">
+                <img src="galleri2.jpg" alt="Event Impression 2">
+                <img src="galleri3.jpeg" alt="Event Impression 3">
+                <img src="galleri4.jpeg" alt="Event Impression 4">
+                <img src="galleri5.jpeg" alt="Event Impression 5">
+                <img src="galleri6.jpeg" alt="Event Impression 6">
+                <img src="galleri7.jpeg" alt="Event Impression 7">
+                <img src="galleri10.jpeg" alt="Event Impression 8">
+                <img src="galleri11.jpeg" alt="Event Impression 9">
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE AUFNAHMEN UND MIXES -->
+    <section id="music" class="section-dark">
+        <div class="section-header">
+            <h2 class="section-title" data-de="LIVE AUFNAHMEN UND MIXES" data-en="LIVE RECORDINGS & MIXES">LIVE AUFNAHMEN UND MIXES</h2>
+        </div>
+
+        <div class="audio-grid">
+            <div class="audio-card">
+                <div class="audio-title">Romina + Janosch Bday</div>
+                <div class="tags"><span class="tag">#Rap</span><span class="tag">#Funk</span><span class="tag">#80s</span><span class="tag">#90s</span></div>
+                <audio controls preload="metadata" src="Mix1_Romina.mp3"></audio>
+            </div>
+            <div class="audio-card">
+                <div class="audio-title">Andrey + Sophie Hochzeit</div>
+                <div class="tags"><span class="tag">#Disco</span><span class="tag">#80s</span><span class="tag">#90s</span></div>
+                <audio controls preload="metadata" src="Mix2_Andre.mp3"></audio>
+            </div>
+            <div class="audio-card">
+                <div class="audio-title">Wedding in Wedding</div>
+                <div class="tags"><span class="tag">#90s</span><span class="tag">#Italo</span><span class="tag">#World</span><span class="tag">#Funk</span></div>
+                <audio controls preload="metadata" src="Mix3_Jewish.mp3"></audio>
+            </div>
+            <div class="audio-card">
+                <div class="audio-title">Wolf + Anna in Brandenburg</div>
+                <div class="tags"><span class="tag">#Indie</span><span class="tag">#80s</span><span class="tag">#Rock</span><span class="tag">#00s</span></div>
+                <audio controls preload="metadata" src="Mix4_Wolf.mp3"></audio>
+            </div>
+        </div>
+
+        <div class="soundcloud-widget-container">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/presspete&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Q&A / FAQ SEKTION -->
+    <section class="section-dark" style="background-color: #0c0d10; border-top: 1px solid var(--border);">
+        <div class="section-header">
+            <h2 class="section-title">Q&A</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Was ist dein Preis?" data-en="What is your pricing?">Was ist dein Preis?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Jedes Event ist individuell, daher kalkuliere ich transparent nach Umfang, Spieldauer und Ort. Schickt mir einfach eure Infos über das Formular und ihr erhaltet ein unverbindliches Angebot." data-en="Every event is unique, so I calculate transparently based on scope, duration, and location. Just send me your details via the form and you will receive a non-binding offer.">
+                    Jedes Event ist individuell, daher kalkuliere ich transparent nach Umfang, Spieldauer und Ort. Schickt mir einfach eure Infos über das Formular und ihr erhaltet ein unverbindliches Angebot.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Was passiert nach der Anfrage?" data-en="What happens after sending an inquiry?">Was passiert nach der Anfrage?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Ihr bekommt zeitnah ein konkretes Angebot. Passt es für euch, verabreden wir uns zu einem gemeinsamen Videocall, um uns kennenzulernen und eure musikalischen Vorstellungen abzustimmen." data-en="You will receive a quote promptly. If it fits, we schedule a relaxed video call to get to know each other and discuss your musical vision.">
+                    Ihr bekommt zeitnah ein konkretes Angebot. Passt es für euch, verabreden wir uns zu einem gemeinsamen Videocall, um uns kennenzulernen und eure musikalischen Vorstellungen abzustimmen.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Können wir uns vorab kennenlernen?" data-en="Can we meet beforehand?">Können wir uns vorab kennenlernen?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Um die Abstimmung für euch so flexibel und zeitsparend wie möglich zu halten, biete ich einen Videocall an. So können wir alle Details in Ruhe besprechen – egal wo ihr gerade seid. Das hat bisher immer gut funktioniert." data-en="To keep coordination as flexible and time-saving as possible for you, I offer a video call. This allows us to discuss all details in peace – no matter where you are. This has always worked out well so far.">
+                    Um die Abstimmung für euch so flexibel und zeitsparend wie möglich zu halten, biete ich einen Videocall an. So können wir alle Details in Ruhe besprechen – egal wo ihr gerade seid. Das hat bisher immer gut funktioniert.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Wann bist du am Veranstaltungstag vor Ort?" data-en="When do you arrive on the day?">Wann bist du am Veranstaltungstag vor Ort?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Ich bin immer 30 Minuten vor Beginn meines Gigs vor Ort. Da mein Setup eingespielt und kompakt ist, ist das immer reichlich Zeit, um die Technik entspannt aufzubauen und startklar zu sein." data-en="I always arrive 30 minutes before the start of my gig. Since my setup is compact and well rehearsed, this is always plenty of time to set up smoothly and be ready to go.">
+                    Ich bin immer 30 Minuten vor Beginn meines Gigs vor Ort. Da mein Setup eingespielt und kompakt ist, ist das immer reichlich Zeit, um die Technik entspannt aufzubauen und startklar zu sein.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Spielst du bestimmte Sachen nicht?" data-en="Are there specific genres/songs you don't play?">Spielst du bestimmte Sachen nicht?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Grundsätzlich richte ich mich nach euren Wünschen. Schlager oder Ballermann-Hits sind jedoch nicht meine Welt – mein Fokus liegt auf stimmungsvoller Funk-, Disco-, 80s/90s-, 00s-, Indie-, Rock- und elektronischer Club-Musik mit echtem Drive." data-en="I cater to your musical taste. However, cheesy party tunes (German Schlager) are not my style — my focus is on soulful Funk, Disco, 80s/90s, 00s, Indie, Rock, and energetic electronic club vibes.">
+                    Grundsätzlich richte ich mich nach euren Wünschen. Schlager oder Ballermann-Hits sind jedoch nicht meine Welt – mein Fokus liegt auf stimmungsvoller Funk-, Disco-, 80s/90s-, 00s-, Indie-, Rock- und elektronischer Club-Musik mit echtem Drive.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span data-de="Bringst du eine Anlage mit?" data-en="Do you bring a sound system?">Bringst du eine Anlage mit?</span>
+                    <span class="faq-toggle-icon">+</span>
+                </div>
+                <div class="faq-answer" data-de="Ich biete eine SoundBoks 4 an, die ich direkt mitbringe. Perfekt für Partys mit 50–80 Gästen. Bei größeren Locations berate ich euch gerne zum Verleih vor Ort. Preis: 100 Euro für einen Abend." data-en="I offer a SoundBoks 4, which I bring directly with me. Perfect for parties with 50–80 guests. For larger locations, I am happy to advise you on local rentals. Price: 100 Euros for an evening.">
+                    Ich biete eine SoundBoks 4 an, die ich direkt mitbringe. Perfekt für Partys mit 50–80 Gästen. Bei größeren Locations berate ich euch gerne zum Verleih vor Ort. Preis: 100 Euro für einen Abend.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ANFRAGE -->
+    <section id="booking" class="section-dark" style="background-color: #0f1013;">
+        <div class="section-header">
+            <h2 class="section-title" data-de="ANFRAGEN" data-en="INQUIRE">ANFRAGEN</h2>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto 30px auto;">
+            <div class="availability-badge">
+                <div class="availability-dot"></div>
+                <div data-de="Aktuell nehme ich Buchungen für die Saison 2026 entgegen. Auch erste Termine für 2027 werden bereits gebucht. Sichert euch euren Wunschtermin frühzeitig!" data-en="Currently accepting bookings for the 2026 season and early inquiries for 2027. Secure your preferred date early!">
+                    Aktuell nehme ich Buchungen für die Saison 2026 entgegen. Auch erste Termine für 2027 werden bereits gebucht. Sichert euch euren Wunschtermin frühzeitig!
+                </div>
+            </div>
+        </div>
+
+        <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="8e443660-2590-4aa0-9fc6-e6468074b785">
+            <input type="hidden" name="subject" value="Neue Buchungsanfrage von DJ PRESS PETE Website">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <div class="form-group">
+                <label data-de="Name *" data-en="Name *">Name *</label>
+                <input type="text" name="name" required placeholder="Vor- & Nachname">
+            </div>
+            <div class="form-group">
+                <label data-de="E-Mail *" data-en="Email *">E-Mail *</label>
+                <input type="email" name="email" required placeholder="beispiel@mail.de">
+            </div>
+            <div class="form-group">
+                <label data-de="Telefon / WhatsApp" data-en="Phone / WhatsApp">Telefon / WhatsApp</label>
+                <input type="tel" name="phone" placeholder="+49 170 1234567">
+            </div>
+            <div class="form-group">
+                <label data-de="Geplantes Datum *" data-en="Planned Date *">Geplantes Datum *</label>
+                <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label data-de="Location / Stadt *" data-en="Location / City *">Location / Stadt *</label>
+                <input type="text" name="location" placeholder="z.B. Berlin, Copenhagen, Mallorca..." required>
+            </div>
+            <div class="form-group">
+                <label data-de="Ungefähre Dauer" data-en="Approx. duration">Ungefähre Dauer</label>
+                <input type="text" name="duration" placeholder="z.B. 6 Stunden (Open End)">
+            </div>
+
+            <div class="form-group full">
+                <label data-de="Details zur Feier & Musikwünsche" data-en="Event details & music preferences">Details zur Feier & Musikwünsche</label>
+                <textarea name="message" rows="4" placeholder="Art der Feier (Hochzeit, B-Day, Corporate), Gästeanzahl, gewünschte Genres..."></textarea>
+            </div>
+            
+            <div class="form-group full">
+                <button type="submit" id="submit-btn" class="btn-primary" style="width: 100%;" data-de="UNVERBINDLICH ANFRAGEN" data-en="SUBMIT REQUEST">UNVERBINDLICH ANFRAGEN</button>
+                
+                <div id="form-status" style="display: none; margin-top: 15px; padding: 16px; border-radius: 6px; font-weight: 600; text-align: center; font-size: 0.95rem;"></div>
+
+                <p id="form-note" class="form-response-note" data-de="Ich melde mich in der Regel innerhalb von 48 Stunden mit einem individuellen Angebot." data-en="I usually reply within 48 hours with a custom proposal.">
+                    Ich melde mich in der Regel innerhalb von 48 Stunden mit einem individuellen Angebot.
+                </p>
+            </div>
+        </form>
+    </section>
+
+    <a href="#booking" class="btn-primary mobile-sticky-btn" data-de="TERMIN ANFRAGEN" data-en="INQUIRE NOW">TERMIN ANFRAGEN</a>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p id="cookie-text" data-de="Wir nutzen Cookies und Google Analytics, um die Website-Nutzung zu verstehen und dein Erlebnis zu verbessern. Mehr Infos in unserer <a href='datenschutz.html'>Datenschutzerklärung</a>." data-en="We use cookies and Google Analytics to understand website traffic and enhance your experience. Learn more in our <a href='datenschutz.html'>Privacy Policy</a>.">
+            Wir nutzen Cookies und Google Analytics, um die Website-Nutzung zu verstehen und dein Erlebnis zu verbessern. Mehr Infos in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn-accept" onclick="acceptCookies()" data-de="Akzeptieren" data-en="Accept">Akzeptieren</button>
+            <button class="cookie-btn-decline" onclick="declineCookies()" data-de="Ablehnen" data-en="Decline">Ablehnen</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="logo">DJ PRESS PETE</div>
+            <div style="color: var(--text-muted); font-size: 0.85rem;">Berlin | Copenhagen | Palma de Mallorca</div>
+            <a href="https://www.instagram.com/presspete/" target="_blank" class="social-link-ig">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                @presspete
+            </a>
+            <div><a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: none; font-weight: 700;">umitumlaut@gmail.com</a></div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2026 DJ PRESS PETE. Alle Rechte vorbehalten.</div>
+            <div class="footer-legal-links">
+                <!-- Verlinkung deiner neuen regionalen Unterseiten für SEO -->
+                <a href="hochzeits-dj-berlin.html">Hochzeits-DJ Berlin</a>
+                <a href="wedding-dj-copenhagen.html">Wedding DJ Copenhagen</a>
+                <a href="hochzeits-dj-mallorca.html">Hochzeits-DJ Mallorca</a>
+                <span style="color: #333;">|</span>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'de';
+
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            nav.classList.toggle('open');
+            toggleBtn.textContent = nav.classList.contains('open') ? '✕' : '☰';
+        }
+
+        function closeMenu() {
+            const nav = document.getElementById('nav-menu');
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            nav.classList.remove('open');
+            toggleBtn.textContent = '☰';
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            if(lang === 'de') { 
+                document.querySelectorAll('.lang-btn')[0].classList.add('active'); 
+            } else { 
+                document.querySelectorAll('.lang-btn')[1].classList.add('active'); 
+            }
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => { 
+                if (el.id === 'cookie-text') {
+                    el.innerHTML = el.getAttribute('data-' + lang);
+                } else {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookie_consent', 'granted');
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookie_consent', 'denied');
+            gtag('consent', 'update', { 'analytics_storage': 'denied' });
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const consent = localStorage.getItem('cookie_consent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.add('show');
+            }
+
+            const gallery = document.getElementById('auto-gallery');
+            if (gallery) {
+                let isInteracting = false;
+                function autoScrollGallery() {
+                    if (!isInteracting) {
+                        gallery.scrollLeft += 1;
+                        if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+                            gallery.scrollLeft = 0;
+                        }
+                    }
+                    requestAnimationFrame(autoScrollGallery);
+                }
+                requestAnimationFrame(autoScrollGallery);
+                gallery.addEventListener('mouseenter', () => isInteracting = true);
+                gallery.addEventListener('mouseleave', () => isInteracting = false);
+                gallery.addEventListener('touchstart', () => isInteracting = true, {passive: true});
+                gallery.addEventListener('touchend', () => isInteracting = false);
+            }
+
+            const form = document.getElementById('booking-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formStatus = document.getElementById('form-status');
+            const formNote = document.getElementById('form-note');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const initialBtnText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = currentLang === 'de' ? 'WIRD GESENDET...' : 'SENDING...';
+
+                    const formData = new FormData(form);
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status === 200) {
+                            formStatus.style.display = 'block';
+                            formStatus.style.background = 'rgba(46, 204, 113, 0.15)';
+                            formStatus.style.border = '1px solid #2ecc71';
+                            formStatus.style.color = '#2ecc71';
+                            formStatus.innerHTML = currentLang === 'de' 
+                                ? '✓ Danke für deine Anfrage! Ich habe deine Nachricht erhalten und melde mich innerhalb der nächsten 48 Stunden bei dir.' 
+                                : '✓ Thank you for your inquiry! I received your message and will get back to you within 48 hours.';
+                            form.reset();
+                            if (formNote) formNote.style.display = 'none';
+                        } else {
+                            throw new Error(json.message);
+                        }
+                    })
+                    .catch(error => {
+                        formStatus.style.display = 'block';
+                        formStatus.style.background = 'rgba(231, 76, 60, 0.15)';
+                        formStatus.style.border = '1px solid #e74c3c';
+                        formStatus.style.color = '#ff6b6b';
+                        formStatus.innerHTML = currentLang === 'de'
+                            ? 'Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreibe mir direkt an <a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: underline;">umitumlaut@gmail.com</a>.'
+                            : 'Something went wrong. Please try again or email me directly at <a href="mailto:umitumlaut@gmail.com" style="color: #fff; text-decoration: underline;">umitumlaut@gmail.com</a>.';
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = initialBtnText;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
