@@ -6,19 +6,27 @@
     <title>Wedding DJ Copenhagen | DJ PRESS PETE</title>
     <meta name="description" content="Erfahrener DJ für Hochzeiten, Corporate Events und private Feiern in Berlin, Kopenhagen und Mallorca. Disco, House, Funk, 80s/90s. Jetzt unverbindlich anfragen!">
 
-    <!-- Google tag (gtag.js) with GDPR Consent Mode -->
+    <!-- Google tag (gtag.js) with GDPR Consent Mode v2 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWWT8GLFCK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('consent', 'default', {
         'analytics_storage': 'denied',
-        'ad_storage': 'denied'
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
       });
       gtag('js', new Date());
       gtag('config', 'G-XWWT8GLFCK');
       if (localStorage.getItem('cookie_consent') === 'granted') {
-        gtag('consent', 'update', {'analytics_storage': 'granted'});
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
       }
     </script>
     
@@ -725,13 +733,23 @@
 
         function acceptCookies() {
             localStorage.setItem('cookie_consent', 'granted');
-            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+            });
             document.getElementById('cookie-banner').classList.remove('show');
         }
 
         function declineCookies() {
             localStorage.setItem('cookie_consent', 'denied');
-            gtag('consent', 'update', { 'analytics_storage': 'denied' });
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+            });
             document.getElementById('cookie-banner').classList.remove('show');
         }
 
@@ -781,6 +799,14 @@
                     .then(async (response) => {
                         let json = await response.json();
                         if (response.status === 200) {
+                            // Google Analytics Key Event (Conversion) senden
+                            if (typeof gtag === 'function') {
+                                gtag('event', 'generate_lead', {
+                                    'event_category': 'Booking',
+                                    'event_label': document.title
+                                });
+                            }
+
                             formStatus.style.display = 'block';
                             formStatus.style.background = 'rgba(46, 204, 113, 0.15)';
                             formStatus.style.border = '1px solid #2ecc71';
